@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>+ Móvil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style-almaguia-unificado.css">
+ 	<script src="js/lib/jquery-2.2.0.min.js" type="text/javascript"></script>
+ 	<script src="js/lib/jquery-ui-1.12.1.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+	<link rel="stylesheet" href="js/lib/datebox/jtsage-datebox.min.css">
+	<script src="js/lib/datebox/jtsage-datebox.min.js"></script>
+	<script src="js/lib/datebox/config.js"></script>
+	<script src="js/lib/formvalidator/jquery.form-validator.min.js"></script>
+	<script src="js/helpers.js"></script>
+</head>
+<body class="background">
+
+<!-- Layout -->
+<div class="main-bar">
+	<div class="head">
+		<span class="navicon icon-menu"></span>
+		<img src="images/logotipo-masmovil.png" alt="Logotipo +móvil" class="logo">
+		<span class="search-button icon-search"></span>
+	</div>
+
+	<div class="primary-menu">
+		<div class="user">
+			<div class="picture">
+				<img src="images/avatar.jpg">
+			</div>
+			<div class="name">Jhon Doe</div>
+		</div>
+
+		<ul class="navigation"></ul>
+
+		<div class="footer-menu">
+			<img src="images/logo-grayscale.png" alt="Logotipo +movil" class="logo">
+			<p>Copyright 2016 - Reservados todos los derechos</p>
+			<a href="">Términos del servicio</a>
+		</div>
+	</div>
+
+	<div class="search-box">
+		<form action="" class="search-form">
+			<input type="text" class="input-search" placeholder="Buscar...">
+			<button class="search-btn icon-search"></button>
+		</form>
+		<span class="icon-arrow_back close-button"></span>
+	</div>
+
+	<div class="notification-bar">Hola <b>Jhon</b>, buenos días</div>
+
+</div>
+
+<!-- Fin layout -->
+
+
+<div class="main-section">
+	<ul class="profile-tab-nav">
+		<li class="current">
+			<a href="cuenta-datos_personales.html" class="">DATOS TDC</a>
+		</li>
+		<li><a href="cuenta-descargas.html">Confirmacion de Pago</a></li>
+		<li><a href="cuenta-ver_mas_tarde.html" class="">Estatus de Transaccion</a></li>
+	</ul>
+
+	<div class="floating-bar background align-element">
+		<div class="align-element">
+			<a href="" class="icon-arrow_back button-back button-back-color"></a>
+			<img class="img2" src="images/svg-icons-2/carito.svg" alt="">
+			<span class="car-title">Modulo de Pagos</span>
+		</div>
+	</div>
+
+	<div class="wrap">
+		<form class="form" action="">
+
+			<div class="separation"></div>
+
+			<div class="align-element">
+				<img class="image-icon" src="images/svg-icons-2/visa.svg">
+				<img class="image-icon" src="images/svg-icons-2/mastercard.svg">
+				<img class="image-icon" src="images/svg-icons-2/american.svg">
+			</div>
+
+			<label class="input-label stroke">
+				<span class="label-title">&nbsp;</span>
+				<input type="text" value="Nombre Titular" data-validation="required email">
+			</label>
+
+			<label class="input-label stroke">
+				<span class="label-title">&nbsp;</span>
+				<input type="text" value="N de TDC" data-validation="required email">
+			</label>
+
+			<label class="input-label stroke">
+				<span class="label-title">&nbsp;</span>
+				<input type="text" value="Codigo de Seguridad" data-validation="required email">
+			</label>
+
+			<label class="input-label stroke">
+				<span class="label-title">&nbsp;</span>
+				<input class="datebox-1" type="text" value="27/02/1987">
+				<i class="icon-action icon-date"></i>
+			</label>
+
+			<label class="input-label stroke">
+				<span class="label-title">&nbsp;</span>
+				<input type="text" value="Cedula de Identidad" data-validation="required email">
+			</label>
+
+			<label class="input-label stroke">
+				<span class="label-title">&nbsp;</span>
+				<input type="text" value="Numero de Telefono" data-validation="required email">
+			</label>
+
+			<div class="align-element-right">
+				<span class="font-p">Total a pagar:</span>
+			</div>
+
+			<div class="separation"></div>
+
+			<div class="align-element">
+				<span class="price-c">BS 7.000</span>
+			</div>
+
+			<div class="separation"></div>
+
+			<div class="align-element">
+				<div class="checkbox-center">
+					<ul class="checkbox-list">
+						<li><label><input type="checkbox"><i class="icon-checkbox"></i>Terminos y condiciones</label></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="text-center v-spacing-20">
+				<button class="button raised primary-color show-hide-pass color-personal">Confirmar Pago</button>
+			</div>
+		</form>
+	</div>
+
+
+</div>
+<script src="js/lib/formvalidator/config.js"></script>
+</body>
+</html>

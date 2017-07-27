@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>+ Móvil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/lib/jquery-2.2.0.min.js"></script>
+	<script src="js/lib/jquery-ui-1.12.1.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+	<link rel="stylesheet" href="js/lib/datebox/jtsage-datebox.min.css">
+	<script src="js/lib/datebox/jtsage-datebox.min.js"></script>
+	<script src="js/lib/datebox/config.js"></script>
+	<script src="js/lib/formvalidator/jquery.form-validator.min.js"></script>
+	<script src="js/helpers.js"></script>
+</head>
+<body class="brand-color-bg">
+
+<div class="access-form">
+	<img src="images/logotipo-masmovil-big.png" alt="Logotipo +móvil" class="logo">
+	<div class="form-title"><span>Registrarme</span></div>
+	
+	<form action="">
+		<div class="x2">
+			<label class="x2-left"><input type="text" placeholder="Nombre" autofocus data-validation="required"><span class="icon icon-person"></span></label>
+			<label class="x2-right"><select><option>Sexo</option><option>M</option><option>F</option></select></label>
+		</div>
+		<label><input type="text" placeholder="Correo" data-validation="required email"><span class="icon icon-mail2"></span></label>
+		<label><input class="datebox-2" type="text" placeholder="Fecha de nacimiento"><span class="icon icon-date"></span></label>
+		<label><input type="text" placeholder="Teléfono" data-validation="required number"><span class="icon icon-phone"></span></label>
+		<label><input class="validation-success" type="password" placeholder="Contraseña" data-validation="required"><span class="icon icon-lock"></span></label>
+		<label><input type="password" placeholder="Repita contraseña" data-validation="required"><span class="icon icon-lock"></span></label>
+
+		<button>Crear cuenta</button>
+		
+		<a href="" class="link">No, gracias</a>
+	</form>
+
+</div>
+
+<script src="js/lib/formvalidator/config.js"></script>
+</body>
+</html>

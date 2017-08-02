@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>almagu�a</title>
+    <link rel="shortcut icon" href="banners/sites/1167.gif">
+    <link type="text/css" rel="stylesheet" href="css/style-almaguia_1167.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/lib/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/lib/prefixfree.min.js"></script>
+    <script src="js/lib/expander/jquery.expander.js"></script>
+    <script src="js/lib/expander/config.js"></script>
+    <link rel="stylesheet" href="js/lib/magnific-popup/magnific-popup.css">
+    <script src="js/lib/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="js/lib/alertify/alertify.css">
+    <script src="js/lib/magnific-popup/config.js"></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/lib/inits/init.js"></script>
+</head>
+<body>
+
+    <div class='share-box' data-title="Compartir en">
+        <div class="share-box-content">
+            <input id="idOmm" type="hidden" name="idOmm" value="">
+            <a href="javascript:compartir(0)" class="svg-icon-whatsapp">WhatsApp</a>
+            <!--<a href="javascript:compartir(1,'Facebook')" class="svg-icon-facebook">Facebook</a>-->
+            <a href="javascript:compartir(2)" class="svg-icon-twitter">Twitter</a>
+            <!--<a href="javascript:compartir(3,'Instagram')" class="svg-icon-instagram">Instagram</a>
+            <a href="javascript:compartir(4,'Skype')" class="svg-icon-skype">Skype</a>
+            <a href="javascript:compartir(5,'Youtube')" class="svg-icon-youtube">Youtube</a>-->
+            <a href="javascript:compartir(6)" class="svg-icon-email">Correo electronico</a>
+            <!--<a href="javascript:compartir(7,'Google+')" class="svg-icon-googleplus">Google+</a>-->
+            <a href="javascript:compartir(8)" class="svg-icon-sms">Mensajes</a>
+        </div>
+        <div class="close-button icon-close"></div>
+    </div>
+<script>
+
+function compartir(opc,app) {
+    /************ COMPARTIR REDES SOCIALES **********/
+    var fallbackLink = "";
+    var msj = "Te invito a ver el contenido de Alamano http://wap.alamano.com/sbk/ccd.jsp?idCat=2979906&idOmm=null&s=null";
+    var fallbackLink = "";
+     		
+    if(opc == '0'){
+      fallbackLink = "https://play.google.com/store/apps/details?id=com.whatsapp&hl=es";     
+      window.location = "whatsapp://send?text=" + encodeURIComponent(msj); 
+    } 
+    if(opc == '1'){
+      window.location = 'https://m.facebook.com'; 
+    } 
+    if(opc == '2'){
+      fallbackLink = "https://play.google.com/store/apps/details?id=com.twitter.android&hl=es";
+      window.location = "twitter://post?message=" + encodeURIComponent(msj); 
+    } 
+    if(opc == '3'){
+      window.location = "https://instagram.com/p/"; 
+    }     
+    if(opc == '4'){
+      window.location = "skype:chat"; 
+    }
+    if(opc == '5'){
+      window.location = "https://www.youtube.com/"; 
+    }    
+    if(opc == '6'){
+      window.location = "mailto:?body=" + encodeURIComponent(msj);; 
+    }    
+    if(opc == '7'){
+      window.location = "https://plus.google.com";
+    }
+    if(opc == '8'){
+      var ua = navigator.userAgent.toLowerCase();
+      if (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1){
+         url = "sms:&body=" + encodeURIComponent(msj);
+      } else{
+         url = "sms:?body=" + encodeURIComponent(msj);
+      }
+      location.href = url;    
+    } 
+
+     window.setTimeout(function (){
+      if(opc == '2' || opc == '0'){
+         window.location.replace(fallbackLink);
+      } 
+    }, 100);
+ 
+}
+
+</script>
+
+
+<div class='share-box' data-title="Compartir en">
+	<div class="share-box-content">
+		
+			<a href="javascript:compartir(0,'WhatsApp')" class="svg-icon-whatsapp">WhatsApp</a>
+			<!--<a href="javascript:compartir(1,'Facebook')" class="svg-icon-facebook">Facebook</a>-->
+			<a href="javascript:compartir(2,'Twitter')" class="svg-icon-twitter">Twitter</a>
+			<!--<a href="javascript:compartir(3,'Instagram')" class="svg-icon-instagram">Instagram</a>
+			<a href="javascript:compartir(4,'Skype')" class="svg-icon-skype">Skype</a>
+			<a href="javascript:compartir(5,'Youtube')" class="svg-icon-youtube">Youtube</a>-->
+			<a href="javascript:compartir(6,'Correo electronico')" class="svg-icon-email">Correo electronico</a>
+			<!--<a href="javascript:compartir(7,'Google+')" class="svg-icon-googleplus">Google+</a>-->
+			<a href="javascript:compartir(8,'Mensajes')" class="svg-icon-sms">Mensajes</a>
+	
+	</div>
+	<div class="close-button icon-close"></div>
+</div>
+
+<!-- Layout -->
+    <div class="main-bar">
+	<div class="head">
+		<span class="navicon icon-menu"></span>
+                <a href="index.jsp?s=1167"><img src="banners/sites/almaguia_1166_340_1167_340.png" alt="" class="logo"></a>
+		<span class="search-button icon-search"></span>
+	</div>
+
+	<div class="primary-menu">
+		<div class="user">
+			<div class="picture">
+				<img src="avatarusuarios/584123210026.jpg">
+			</div>
+			<div class="name">Roswer te deseamos un maravilloso d�a!. <b><a href='mc.jsp?s=1167'>Mi Cuenta</a></b></div>
+		</div>
+
+		<ul class="navigation">  
+            <!-- li class="icon-settings"><a href="">Personalizar p�gina inicial</a></li>   
+			<li class="icon-suscription"><a href="">Suscripciones</a></li>
+			<li class="separator"></li -->
+<li class="icon-suscription"><a href="http://wap.alamano.com/sbk/tyc.jsp?s=1167">T�rminos y Condiciones</a></li>
+				<li class="separator"></li>
+				<li class=""><a href="index.jsp?s=1167">Home</a></li>
+				<li class="separator"></li>			 
+<li class="icon-person"><a href="mc.jsp?s=1167">Mi Cuenta</a></li>
+			<li class="icon-download"><a href="md.jsp?s=1167&o=71">Mis Descargas</a></li>
+			<li class="icon-time"><a href="vmt.jsp?s=1167">Ver mas tarde</a></li>
+			<li class="separator"></li>
+			
+				<li class="icon-suscription"><a href="ccd.jsp?s=1167&idCat=2952941">Tips de Meditaci�n</a></li>
+            <li class="separator"></li>			
+<li class="icon-video"><a href="lv.jsp?s=1167&catId=2952997">Videos</a></li>
+            <li class="separator"></li>			
+<li class="icon-photo"><a href="lm.jsp?s=1167&idcat=2952975">Fotos</a></li>
+            <li class="separator"></li>			
+<li class="icon-paper"><a href="lj.jsp?s=1167&idcat=2952979">Aplicaciones</a></li>
+            <li class="separator"></li>			
+</ul>
+		<div class="footer-menu">
+<div><a href="http://wap.alamano.com/cancelarSuscripcion.jsp?s=1167&o=71">Cancelar Suscripci&oacute;n</a></div>
+
+<p>Copyright 2017 - Reservados todos los derechos</p>
+		</div>
+
+	</div>
+
+    <div class="search-box">
+		<form action="resultados-busqueda.jsp" method="GET" class="search-form" autocomplete="on" >
+			<input name="opcion" type="text" class="input-search" placeholder="Buscar...">
+			   <input type="hidden" name="s" value="1167">
+			<button  class="search-btn icon-search"></button>  
+		</form>
+		<span class="icon-arrow_back close-button"></span>
+	</div>
+	
+	<div class="notification-bar">Roswer te deseamos un maravilloso d�a!. <b><a href='mc.jsp?s=1167'>Mi Cuenta</a></b></div>
+    <div class="floating-bar">
+        	<a href="javascript:goBack();" class="icon-arrow_back button-back"></a>
+            <p class="main-title">Marcos Fidel</p>
+            </div>
+         </div>
+<script>
+function goBack() {
+    window.history.back();
+}
+
+function msg(){
+   alert("En construccion");
+}
+</script><!-- Fin layout -->
+
+    <div class="main-section">
+            <!-- 	<div class="notification-box">
+                    <div class="content-left">
+                            <p>Si deseas recibir notificaciones diarias de este contenido, es muy fácil, sólo debes suscribirte por B XX por día.</p>
+                    </div>
+                    <div class="content-right">
+                            <a href="#" class="button primary-color">Suscríbete</a>
+                    </div>
+            </div> -->
+        <ul class="post-list">
+                <li style="padding-bottom: -20px">
+									<h2 class="post-title">baby boss</h2>
+									<ul class="video-slider">
+                                            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/2LeOH9AGJQM" frameborder="0" allowfullscreen></iframe></li>	
+                                        </ul>
+
+                                <div class="footer-btn-float">
+                                    <div style="text-align: right">
+                                        <button onclick="" class="footer-btn margin">+</button>
+                                    </div>
+                                </div>
+                                <div class="footer-bar fixed height background" >
+                                    <div class="footer-bar-main-button icon-close close footer-slide"></div>
+
+                                    <a href="#" class="button-option icon-time one"><span>Ver más tarde</span></a>
+                                    <a href="#" class="button-option icon-share two share-action-button"><span>Compartir</span></a>
+                                    <a href="#" class="button-option icon-download three"><span>Descargar</span></a>
+                                    <a href="#" class="button-option icon-like-outline four"><span>Like</span></a>
+                                    <a href="#" class="button-option icon-share five"><span>Compartir</span></a>
+                                </div>
+
+                                </li>
+                             <li>
+									<h2 class="post-title">Cata de flores</h2>
+									<div class="post-img">
+                                            <img src="http://admin.conectium.com/repo/archivos/texto/1158361.gif">
+                                            <a href="http://admin.conectium.com/repo/archivos/texto/1158361.gif" class="vertical-modal-image full-view-image-button"><span>Expandir imagen</span> <i class="icon-zoom_in"></i></a>
+
+                                            <div class="footer-btn-float">
+                                                <div style="text-align: right">
+                                                    <button onclick="" class="footer-btn margin">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="footer-bar fixed height background" >
+                                                <div class="footer-bar-main-button icon-close close footer-slide"></div>
+
+                                                <a href="#" class="button-option icon-time one"><span>Ver más tarde</span></a>
+                                                <a href="#" class="button-option icon-share two share-action-button"><span>Compartir</span></a>
+                                                <a href="#" class="button-option icon-download three"><span>Descargar</span></a>
+                                                <a href="#" class="button-option icon-like-outline four"><span>Like</span></a>
+                                                <a href="#" class="button-option icon-share five"><span>Compartir</span></a>
+                                            </div>
+                                        </div>
+                                    <div class="post-text">
+                                        <p><p>Eres como la respiraci&oacute;n dentro de la respiraci&oacute;n. Una brisa suave que limpia el coraz&oacute;n en dos tiempos que se sienten uno. Dos caballitos de mar que comparten el mismo centro. Dos papagayos armados con la misma berada pero que vuelan en ciudades diferentes. Dos vocales que se juntan para producir un sonido que engendre la semilla de un nuevo lenguaje.</p></p>
+                                    </div>
+
+
+                                </li>
+                             <li>
+									<h2 class="post-title">Luci�rnaga de mar</h2>
+									<div class="post-img">
+                                            <img src="http://admin.conectium.com/repo/archivos/texto/1157677.gif">
+                                            <a href="http://admin.conectium.com/repo/archivos/texto/1157677.gif" class="vertical-modal-image full-view-image-button"><span>Expandir imagen</span> <i class="icon-zoom_in"></i></a>
+
+                                            <div class="footer-btn-float">
+                                                <div style="text-align: right">
+                                                    <button onclick="" class="footer-btn margin">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="footer-bar fixed height background" >
+                                                <div class="footer-bar-main-button icon-close close footer-slide"></div>
+
+                                                <a href="#" class="button-option icon-time one"><span>Ver más tarde</span></a>
+                                                <a href="#" class="button-option icon-share two share-action-button"><span>Compartir</span></a>
+                                                <a href="#" class="button-option icon-download three"><span>Descargar</span></a>
+                                                <a href="#" class="button-option icon-like-outline four"><span>Like</span></a>
+                                                <a href="#" class="button-option icon-share five"><span>Compartir</span></a>
+                                            </div>
+
+                                        </div>
+                                    <div class="post-text">
+                                        <p><p>Las l&aacute;grimas que te ahogan salen de tus ojos. S&oacute;lo t&uacute; puedes detener el r&iacute;o de tus lacrimales. La luz de la luna llena despierta a la mujer que habita en tus profundidades y nutre la blancura de sus p&eacute;talos. El salitre retiene el l&iacute;quido en tu cuerpo pero tambi&eacute;n alimenta el coraz&oacute;n que te delata. Si algo te ha hecho sufrir es porque t&uacute; lo permitiste. Arranca la flor del fondo del mar aunque sus espinas escamadas te corten la piel. Alumbra con todo el esplendor que llevas por dentro.</p></p>
+                                    </div>
+
+                                </li>
+                             </ul>
+        </div>
+    <script src="js/lib/alertify/alertify.js"></script>
+    <script type="text/javascript">
+        var like = function(i, id, like,dislike, voto) {
+            if (true){
+                $.getJSON("registrarLike.jsp?idcc="+id+"&c=1&tagmode=any&format=json&jsoncallback=?",
+                function(data){
+                    if(data.resullike == 1){
+                       
+                       document.getElementById("divlike"+i).innerHTML = like+1;
+                       document.getElementById("reglik"+i).setAttribute("class","like-button active");
+                       //document.getElementById("reglik"+i).removeEventListener("click",function(){like(i, id, like,dislike, voto);},false);
+                       document.getElementById("reglik"+i).removeAttribute("onclick");
+                       document.getElementById("regdislik"+i).setAttribute("class","like-button");
+                       if (voto==2){
+                            document.getElementById("divdislike"+i).innerHTML = dislike-1;
+                            document.getElementById("regdislik"+i).removeAttribute("onclick");
+                            //document.getElementById("reglik"+i).addEventListener("click",function(){none(i,id,parseInt(like+1),parseInt(dislike-1),1);});
+                            document.getElementById("reglik"+i).setAttribute("onclick","none("+i+","+id+","+parseInt(like+1)+","+parseInt(dislike-1)+",1);");
+                            document.getElementById("regdislik"+i).setAttribute("onclick","dislike("+i+","+id+","+parseInt(like+1)+","+parseInt(dislike-1)+",1);");
+                        } 
+                        else{
+                            //document.getElementById("reglik"+i).addEventListener("click",function(){none(i,id,parseInt(like+1),dislike,1);});
+                            document.getElementById("reglik"+i).setAttribute("onclick","none("+i+","+id+","+parseInt(like+1)+","+parseInt(dislike)+",1);");
+                            document.getElementById("regdislik"+i).removeAttribute("onclick");
+                            document.getElementById("regdislik"+i).setAttribute("onclick","dislike("+i+","+id+","+parseInt(like+1)+","+parseInt(dislike)+",1);");
+                        }
+                       alertify.delay(5000).success("Gracias por tu preferencia.");
+                    }else{
+                       alertify.error("No fue Agregado en Mi Cuenta intente mas tarde");
+                    }
+                }).
+                fail(function( jqxhr, textStatus, error ) {
+                    var err = textStatus + ", " + error;
+                    alertify.error("No fue registrada la preferencia, intente mas tarde.");
+                });
+            }	                     
+        };
+
+        var dislike = function (i, id, like,dislike, voto){
+            if (true){
+                $.getJSON("registrarLike.jsp?idcc="+id+"&c=2&tagmode=any&format=json&jsoncallback=?",
+                function(data){
+                    if(data.resullike == 2){
+                       
+                       document.getElementById("divdislike"+i).innerHTML = dislike+1;
+                       document.getElementById("reglik"+i).setAttribute("class","like-button");
+                       //document.getElementById("reglik"+i).removeEventListener("click",function(){dislike(i, id, like,dislike, voto);},false);
+                       document.getElementById("regdislik"+i).removeAttribute("onclick");
+                       document.getElementById("regdislik"+i).setAttribute("class","like-button active");
+                       if(voto==1){
+                           document.getElementById("divlike"+i).innerHTML=like-1;
+                           document.getElementById("reglik"+i).removeAttribute("onclick");
+                         //  document.getElementById("reglik"+i).addEventListener("click",function(){none(i,id,parseInt(like-1),parseInt(dislike+1),2);});
+                         document.getElementById("regdislik"+i).setAttribute("onclick","none("+i+","+id+","+parseInt(like-1)+","+parseInt(dislike+1)+",2);");
+                         document.getElementById("reglik"+i).setAttribute("onclick","like("+i+","+id+","+parseInt(like-1)+","+parseInt(dislike+1)+",2)");
+                       }
+                       else{
+                           //document.getElementById("reglik"+i).addEventListener("click",function(){none(i,id,like,parseInt(dislike+1),2);});
+                           document.getElementById("regdislik"+i).setAttribute("onclick","none("+i+","+id+","+parseInt(like)+","+parseInt(dislike+1)+",2);");
+                           document.getElementById("reglik"+i).removeAttribute("onclick");
+                           document.getElementById("reglik"+i).setAttribute("onclick","like("+i+","+id+","+parseInt(like)+","+parseInt(dislike+1)+",2);");
+                       }
+                       alertify.delay(5000).success("Lamentamos no sea de tu agrado.");
+                       
+                    }else{
+                       alertify.error("No fue Agregado en Mi Cuenta intente mas tarde");
+                    }
+                }).
+                fail(function( jqxhr, textStatus, error ) {
+                    var err = textStatus + ", " + error;
+                    alertify.error("No fue registrado el dislike, intente mas tarde.");
+                });
+            }
+        };
+        
+        var none = function (i, id, like,dislike, voto){
+            
+                $.getJSON("registrarLike.jsp?idcc="+id+"&c=3&tagmode=any&format=json&jsoncallback=?",
+                function(data){
+                    if(data.resullike == 3){
+                        
+                        document.getElementById("reglik"+i).setAttribute("class","like-button");
+                        document.getElementById("regdislik"+i).setAttribute("class","like-button");
+                        
+                        
+                        if(voto==1){
+                            document.getElementById("divlike"+i).innerHTML = like-1;
+                            document.getElementById("reglik"+i).removeAttribute("onclick");
+                            document.getElementById("reglik"+i).setAttribute("onclick","like("+i+","+id+","+parseInt(like-1)+","+dislike+",-1)");
+                            //document.getElementById("reglik"+i).removeEventListener("click",function(){none(i, id, like,dislike, voto);},false);
+                            //document.getElementById("reglik"+i).addEventListener("click",function(){like(i,id,parseInt(like-1),dislike,-1);});
+                        }
+
+                       if (voto==2){
+                            document.getElementById("divdislike"+i).innerHTML = dislike-1;
+                            document.getElementById("regdislik"+i).removeAttribute("onclick");
+                            document.getElementById("regdislik"+i).setAttribute("onclick","dislike("+i+","+id+","+parseInt(like)+","+parseInt(dislike-1)+",-1)");
+                            //document.getElementById("reglik"+i).removeEventListener("click",function(){none(i, id, like,dislike, voto);},false);
+                            //document.getElementById("reglik"+i).addEventListener("click",function(){dislike(i,id,parseInt(like),parseInt(dislike-1),-1);});
+                        } 
+                       alertify.delay(5000).success("Gracias por tu preferencia.");
+                    }else{
+                       alertify.error("No fue Agregado en Mi Cuenta intente mas tarde");
+                    }
+                }).
+                fail(function( jqxhr, textStatus, error ) {
+                    var err = textStatus + ", " + error;
+                    alertify.error("No fue registrada la preferencia, intente mas tarde.");
+                });
+            	            
+        };
+
+        var verdespues = function(idperfil,estatus,idcontenido,catId){
+            if (idperfil == null) {
+                if (estatus=="INACTIVO") {
+                    window.location.href = "http://wap.alamano.com/sbk/registroSuscriptor.jsp?s=1167&o=71";
+                    return;
+                }
+            }
+            $.getJSON("verdespues.jsp?tid="+idcontenido+"&idCat="+catId+"&tc=c&tagmode=any&format=json&jsoncallback=?",
+                function (data) {
+                
+                    if (data.resulverdesp > 0) {
+                        alertify.delay(5000).success("Agregado en Mi Cuenta");
+                    }
+                    else if (data.resulverdesp == 0){
+                        alertify.delay(5000).success("Actualmente registrado en Mi Cuenta");
+                    }
+                    else {
+                        alertify.error("No fue Agregado en Mi Cuenta intente mas tarde");
+                    }
+                }
+            ).
+            fail(function (jqxhr, textStatus, error) {
+                var err = textStatus + ", " + error;
+                alertify.error("No fue Agregado en Mi Cuenta intente mas tarde");
+            });
+        };
+
+        var compartir = function (opc) {
+            var idOmm=0;
+            idOmm=document.getElementById("idOmm").value;
+            var msj = "";
+            var URLactual = window.location;
+            msj = "Te invito a ver el contenido de Panama Claro, AlmaGu�a "+URLactual+"&idomm="+idOmm;
+            if(opc == '0'){  
+              window.location = "whatsapp://send?text=" + encodeURIComponent(msj); 
+            } 
+            if(opc == '1'){
+              window.location = 'https://m.facebook.com'; 
+            } 
+            if(opc == '2'){
+              window.location = "twitter://post?message=" + encodeURIComponent(msj); 
+            } 
+            if(opc == '3'){
+              window.location = "https://instagram.com/p/"; 
+            }     
+            if(opc == '4'){
+              window.location = "skype:chat"; 
+            }
+            if(opc == '5'){
+              window.location = "https://www.youtube.com/"; 
+            }    
+            if(opc == '6'){
+              window.location = "mailto:?body=" + encodeURIComponent(msj);; 
+            }    
+            if(opc == '7'){
+              window.location = "https://plus.google.com";
+            }
+            if(opc == '8'){
+                var ua = navigator.userAgent.toLowerCase();
+                if (ua.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1){
+                   url = "sms:&body=" + encodeURIComponent(msj);
+                } else{
+                   url = "sms:?body=" + encodeURIComponent(msj);
+                }
+                alert("sms:?body=" +msj);
+                location.href = url;    
+            }    
+        };
+
+        var asignarId = function(id){
+            document.getElementById("idOmm").value=id;
+        };
+    </script>
+    <script type="text/javascript">
+        AppInit.init();
+    </script>
+
+
+</body>
+</html>

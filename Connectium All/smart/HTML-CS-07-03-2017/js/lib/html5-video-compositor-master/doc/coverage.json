@@ -1,0 +1,131 @@
+{
+  "coverage": "38.21%",
+  "expectCount": 123,
+  "actualCount": 47,
+  "files": {
+    "src/audiomanager.js": {
+      "expectCount": 12,
+      "actualCount": 0,
+      "undocumentLines": [
+        24,
+        26,
+        102,
+        28,
+        29,
+        61,
+        25,
+        32,
+        45,
+        55,
+        27,
+        67
+      ]
+    },
+    "src/sources/canvassource.js": {
+      "expectCount": 12,
+      "actualCount": 5,
+      "undocumentLines": [
+        4,
+        72,
+        60,
+        21,
+        51,
+        67,
+        20
+      ]
+    },
+    "src/effect.js": {
+      "expectCount": 11,
+      "actualCount": 0,
+      "undocumentLines": [
+        69,
+        70,
+        141,
+        95,
+        71,
+        121,
+        110,
+        127,
+        126,
+        131,
+        72
+      ]
+    },
+    "src/effectmanager.js": {
+      "expectCount": 8,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        4,
+        43,
+        5,
+        31,
+        6,
+        11,
+        17
+      ]
+    },
+    "src/main.js": {
+      "expectCount": 30,
+      "actualCount": 22,
+      "undocumentLines": [
+        1294,
+        1148,
+        1044,
+        30,
+        63,
+        83,
+        73,
+        1458
+      ]
+    },
+    "src/sources/imagesource.js": {
+      "expectCount": 12,
+      "actualCount": 5,
+      "undocumentLines": [
+        4,
+        59,
+        53,
+        75,
+        50,
+        70,
+        52
+      ]
+    },
+    "src/sources/mediasource.js": {
+      "expectCount": 24,
+      "actualCount": 8,
+      "undocumentLines": [
+        3,
+        34,
+        23,
+        27,
+        21,
+        31,
+        22,
+        227,
+        32,
+        223,
+        25,
+        26,
+        28,
+        24,
+        29,
+        30
+      ]
+    },
+    "src/sources/videosource.js": {
+      "expectCount": 14,
+      "actualCount": 7,
+      "undocumentLines": [
+        16,
+        112,
+        107,
+        105,
+        33,
+        156,
+        106
+      ]
+    }
+  }
+}

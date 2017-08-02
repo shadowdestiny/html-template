@@ -1,0 +1,421 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>+ Móvil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style-almaguia-unificado.css">
+    <script src="js/lib/jquery-2.2.0.min.js"></script>
+    <script src="js/lib/prefixfree.min.js"></script>
+    <link href="js/lib/mediaelement/build/mediaelementplayer.css" rel="stylesheet">
+    <script src="js/lib/mediaelement/build/mediaelement-and-player.min.js"></script>
+    <script src="js/lib/slider/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/slider/config.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/inits/init.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="js/lib/rateyo/jquery.rateyo.css"/>
+    <script src="js/lib/rateyo/jquery.rateyo.min.js"></script>
+    <script src="js/lib/rateyo/config.js"></script>
+
+    <script src="js/helpers.js"></script>
+	
+	<script>
+	var Acumular = function(precio){
+	var acumulador = 0;
+		$("input[type='checkbox']:checked").each(function(i){
+			acumulador += precio;
+		});
+		$(".price-b").text("");
+		$(".price-b").text("Bs "+acumulador);
+	};
+	</script>
+</head>
+<body class="background">
+
+
+<!-- Layout -->
+<div class="main-bar">
+    <div class="head">
+        <span class="navicon icon-menu"></span>
+        <a href="index.html"><img src="images/logotipo-masmovil.png" alt="Logotipo +móvil" class="logo"></a>
+        <span class="search-button icon-search"></span>
+    </div>
+
+    <div class="primary-menu">
+        <div class="user">
+            <div class="picture">
+                <img src="images/avatar.jpg">
+            </div>
+            <div class="name">Jhon Doe</div>
+        </div>
+
+        <ul class="navigation">
+            <li class="icon-person"><a href="">Mi cuenta</a></li>
+            <li class="icon-settings"><a href="">Personalizar página principal</a></li>
+            <li class="icon-suscription"><a href="">Suscripciones</a></li>
+
+            <li class="separator"></li>
+
+            <li class="icon-star"><a href="">Promociones</a>
+                <ul>
+                    <li><a href="">Olimpiadas</a></li>
+                </ul>
+            </li>
+
+            <li class="separator"></li>
+
+            <li class="icon-download"><a href="">Descargas</a>
+                <ul>
+                    <li><a href="">Wallpapers</a></li>
+                    <li><a href="">Ringtones</a></li>
+                    <li><a href="">Juegos</a></li>
+                </ul>
+            </li>
+
+            <li class="separator"></li>
+
+            <li class="icon-category">Categorías
+                <ul>
+                    <li><a href="">Humor</a></li>
+                    <li><a href="">Astrología</a></li>
+                    <li><a href="">Alma guía</a></li>
+                    <li><a href="">Deportes</a></li>
+                    <li><a href="">Noticias</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <div class="footer-menu">
+            <img src="images/logo-grayscale.png" alt="Logotipo +movil" class="logo">
+            <p>Copyright 2016 - Reservados todos los derechos</p>
+            <a href="">Términos del servicio</a>
+        </div>
+    </div>
+
+
+
+    <div class="notification-bar">Saludo Personalizado <b><a href="">Suscribete</a></b></div>
+
+    <div class="floating-bar">
+        <a href="" class="icon-arrow_back button-back"></a>
+        <p class="main-title align" style="font-weight: bold;">Carrito</p>
+    </div>
+
+</div>
+
+
+<div class="main-section car">
+
+    <div class="container top">
+        <div class="row origin section-article">
+        <div>
+            <div class="col-xs-5 col-sm-5 col-md-5">
+                <ul class="checkbox-list section-margin-transactional">
+                    <li><label><input id="cbkSelecion" type="checkbox" onclick="Acumular(7000)"><i class="icon-checkbox"></i></label></li>
+                    <li>
+                        <img src="images/transactional/imagen-de-muestra.jpg" class="responsive-img">
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-7 col-sm-7 col-md-7 no-padding">
+                <table class="content-table-transactional">
+                    <tr>
+                        <td>
+                            <ul class="transactional-ul section-margin-transactional">
+                                <li>
+                                    <div class="align-right rateYo-align-right2">
+                                        <table class="rateYo-transactional-car">
+                                            <tr>
+                                                <td>
+                                                    <div class="rateYo-2"></div>
+                                                </td>
+                                                <td/>
+                                                <td>
+                                                    &nbsp;(55)
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                                <li class="subtitle-transactional">
+                                    <div class="separation-min"></div>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consetuerter
+                                    </div>
+                                    <div class="separation-min"></div>
+                                    <div class="line-transactional-2"></div>
+                                </li>
+                                <li>
+                                    <div class="separation-min"></div>
+                                    <div class="color-top-transactional">
+                                        <strong>32</strong> disponible
+                                    </div>
+                                    <div class="font-size-text ">
+                                        Loren upsum dolor sit amet, consectertuer adipiscing elit, sed diam nonmmy nibh euismod tincidun ut laoreet dolore magna aliquam erat
+                                    </div>
+                                </li>
+                                <li>
+                                    <table class="segment-content-transactional">
+                                        <tr>
+                                            <td align="left">
+                                                <div class="pied-transaction color">
+                                                    <span>Bs. 7.000.00</span>
+                                                </div>
+                                            </td>
+                                            <td align="right">
+                                                <div>
+                                                    <div class="count-transactional-car">
+                                                        1
+                                                    </div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="plus-transactional"><a href="#">+</a></span>
+                                                            </td>
+                                                            <td>
+                                                                <img src="images/transactional/carrito_numero.svg" class="icon-pay-car"/>
+                                                            </td>
+                                                            <td>
+                                                                <span class="plus-transactional"><a href="#">-</a></span>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+
+                            </ul>
+                        </td>
+                        <td class="width-standar"/>
+                        <td class="menu-right-transactional menu-hide">
+                            <div class="img-t">
+                                <a href="javascript:void(0)"><img src="images/svg-icons-2/trash.svg"></a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+        <div class="row origin section-article">
+            <div>
+                <div class="col-xs-5 col-sm-5 col-md-5">
+                    <ul class="checkbox-list section-margin-transactional">
+                        <li><label><input id="cbkSelecion" type="checkbox" onclick="Acumular(7000)"><i class="icon-checkbox"></i></label></li>
+                        <li>
+                            <img src="images/transactional/imagen-de-muestra.jpg" class="responsive-img">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-7 col-sm-7 col-md-7 no-padding">
+                    <table class="content-table-transactional">
+                        <tr>
+                            <td>
+                                <ul class="transactional-ul section-margin-transactional">
+                                    <li>
+                                        <div class="align-right rateYo-align-right2">
+                                            <table class="rateYo-transactional-car">
+                                                <tr>
+                                                    <td>
+                                                        <div class="rateYo-2"></div>
+                                                    </td>
+                                                    <td/>
+                                                    <td>
+                                                        &nbsp;(55)
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li class="subtitle-transactional">
+                                        <div class="separation-min"></div>
+                                        <div>
+                                            Lorem ipsum dolor sit amet, consetuerter
+                                        </div>
+                                        <div class="separation-min"></div>
+                                        <div class="line-transactional-2"></div>
+                                    </li>
+                                    <li>
+                                        <div class="separation-min"></div>
+                                        <div class="color-top-transactional">
+                                            <strong>32</strong> disponible
+                                        </div>
+                                        <div class="font-size-text ">
+                                            Loren upsum dolor sit amet, consectertuer adipiscing elit, sed diam nonmmy nibh euismod tincidun ut laoreet dolore magna aliquam erat
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <table class="segment-content-transactional">
+                                            <tr>
+                                                <td align="left">
+                                                    <div class="pied-transaction color">
+                                                        <span>Bs. 7.000.00</span>
+                                                    </div>
+                                                </td>
+                                                <td align="right">
+                                                    <div>
+                                                        <div class="count-transactional-car">
+                                                            1
+                                                        </div>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="plus-transactional"><a href="#">+</a></span>
+                                                                </td>
+                                                                <td>
+                                                                    <img src="images/transactional/carrito_numero.svg" class="icon-pay-car"/>
+                                                                </td>
+                                                                <td>
+                                                                    <span class="plus-transactional"><a href="#">-</a></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </li>
+
+                                </ul>
+                            </td>
+                            <td class="width-standar"/>
+                            <td class="menu-right-transactional menu-hide">
+                                <div class="img-t">
+                                    <a href="javascript:void(0)"><img src="images/svg-icons-2/trash.svg"></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row origin section-article">
+            <div>
+                <div class="col-xs-5 col-sm-5 col-md-5">
+                    <ul class="checkbox-list section-margin-transactional">
+                        <li><label><input id="cbkSelecion" type="checkbox" onclick="Acumular(7000)"><i class="icon-checkbox"></i></label></li>
+                        <li>
+                            <img src="images/transactional/imagen-de-muestra.jpg" class="responsive-img">
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-7 col-sm-7 col-md-7 no-padding">
+                    <table class="content-table-transactional">
+                        <tr>
+                            <td>
+                                <ul class="transactional-ul section-margin-transactional">
+                                    <li>
+                                        <div class="align-right rateYo-align-right2">
+                                            <table class="rateYo-transactional-car">
+                                                <tr>
+                                                    <td>
+                                                        <div class="rateYo-2"></div>
+                                                    </td>
+                                                    <td/>
+                                                    <td>
+                                                        &nbsp;(55)
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li class="subtitle-transactional">
+                                        <div class="separation-min"></div>
+                                        <div>
+                                            Lorem ipsum dolor sit amet, consetuerter
+                                        </div>
+                                        <div class="separation-min"></div>
+                                        <div class="line-transactional-2"></div>
+                                    </li>
+                                    <li>
+                                        <div class="separation-min"></div>
+                                        <div class="color-top-transactional">
+                                            <strong>32</strong> disponible
+                                        </div>
+                                        <div class="font-size-text ">
+                                            Loren upsum dolor sit amet, consectertuer adipiscing elit, sed diam nonmmy nibh euismod tincidun ut laoreet dolore magna aliquam erat
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <table class="segment-content-transactional">
+                                            <tr>
+                                                <td align="left">
+                                                    <div class="pied-transaction color">
+                                                        <span>Bs. 7.000.00</span>
+                                                    </div>
+                                                </td>
+                                                <td align="right">
+                                                    <div>
+                                                        <div class="count-transactional-car">
+                                                            8
+                                                        </div>
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <span class="plus-transactional"><a href="#">+</a></span>
+                                                                </td>
+                                                                <td>
+                                                                    <img src="images/transactional/carrito_numero.svg" class="icon-pay-car"/>
+                                                                </td>
+                                                                <td>
+                                                                    <span class="plus-transactional"><a href="#">-</a></span>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </li>
+
+                                </ul>
+                            </td>
+                            <td class="width-standar"/>
+                            <td class="menu-right-transactional menu-hide">
+                                <div class="img-t">
+                                    <a href="javascript:void(0)"><img src="images/svg-icons-2/trash.svg"></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="v-spacing-20">
+
+   </div>
+
+
+    <div class="footer-bottom-price align-element">
+        <div class="left">
+            <span class="price-a">Total:</span>
+            <br>
+            <span class="price-b">Bs 7000</span>
+        </div>
+        <div class="right">
+            <button>Ir a pagar</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/lib/mediaelement/config.js" type="text/javascript"></script>
+<script type="text/javascript">
+    AppInit.show_hide();
+    AppInit.bas();
+</script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Crowsourcing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/lib/jquery-2.2.0.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+        <link rel="stylesheet" href="js/lib/slick/slick.css">
+	<script src="js/lib/slick/slick.min.js"></script>
+	<script src="js/lib/slick/config.js"></script>
+	<script src="js/helpers.js"></script>
+        <link rel="stylesheet" href="js/lib/alertify/alertify.css">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arsenal|Audiowide|Boogaloo|Bubblegum+Sans|Bungee+Shade|Cherry+Cream+Soda|Chewy|Coda|Comfortaa|Concert+One|Farsan|Fredoka+One|IM+Fell+English+SC|Kumar+One|Limelight|Lobster|Lobster+Two|Lora|Montserrat|Noto+Serif|Oleo+Script|Oswald|Patua+One|Playball|Poiret+One|Righteous|Roboto|Shrikhand|Slabo+27px|Source+Sans+Pro|Special+Elite|Taviraj|Tinos" rel="stylesheet">
+</head>
+<body onload="asignarHijoC(get('canvas'),'c0',0,0,0,0);organizarCanvas(1,1);asignarInput(1);valCategoria(1);">
+	<div class="head">
+<!--		<img src="img/logo.png" alt="Logo" class="logo">-->
+
+		<a href="../session.jsp" class="sign-button">Sign out</a>
+	</div>
+	<div id="step2" class="main-section clearfix">
+		<div class="wrap">
+                    
+                    <div id="info" class="modal">
+                        <div class="modal-content">
+                            <div id="inf">
+                               <p align="center">No posee categorias asignadas, porfavor pongase en contacto con el equipo de conectium</p><br>
+                            
+                               <a style="align-content: center" href="../session.jsp" class="button">Aceptar</a> 
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div id="info2" class="modal">
+                        <div class="modal-content">
+                            <div id="inf">
+                               <p align="center">Esta cambiando la cantidad de imagenes se borraran las ingresadas hasta el momento<br> Desea continuar?</p><br>
+                            
+                               <a style="align-content: center" href="#" class="button" onclick="cerrar('info2')">Cancelar</a> 
+                               <a id="modif" style="align-content: center" href="#" class="button" >Aceptar</a> 
+                            </div>
+                            
+                        </div>
+                    </div>
+
+			<div class="tab-set-1">
+                            <div id="cargando" class="modal">
+                                <img style="display: block; margin: auto;" src="img/cargando.gif"> 
+                            </div>
+                            
+                                
+                            
+                            <input style="display: none" name="input" type="file" id="input" accept='image/*'>
+				<div id="canvas" class="canvas" >
+                                    <canvas id="c" width="0" height="0"  >Su navegador no es compatible</canvas>
+				</div>
+				<ul class="tab-content">
+					<li id="tab-1" class="current" >
+                                            <ul id="carousel-1" class="img-carousel">
+                                                <li><img ondblclick="crearCanvas(1,1)" src="img/plantilla/P1-1.svg" alt=""></li>
+					 	<li><img ondblclick="crearCanvas(2,1)" src="img/plantilla/P2-1.svg" alt=""></li>
+					 	<li><img ondblclick="crearCanvas(2,2)" src="img/plantilla/P2-2.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(3,1)" src="img/plantilla/P3-1.svg" alt=""></li>
+					 	<li><img ondblclick="crearCanvas(3,2)" src="img/plantilla/P3-2.svg" alt=""></li>
+					 	<li><img ondblclick="crearCanvas(3,3)" src="img/plantilla/P3-3.svg" alt=""></li>
+					 	<li><img ondblclick="crearCanvas(3,4)" src="img/plantilla/P3-4.svg" alt=""></li>
+					 	<li><img ondblclick="crearCanvas(3,5)" src="img/plantilla/P3-5.svg" alt=""></li>
+					 	<li><img ondblclick="crearCanvas(3,6)" src="img/plantilla/P3-6.svg" alt=""></li>
+					 	<li><img ondblclick="crearCanvas(4,1)" src="img/plantilla/P4-1.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,2)" src="img/plantilla/P4-2.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,3)" src="img/plantilla/P4-3.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,4)" src="img/plantilla/P4-4.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,5)" src="img/plantilla/P4-5.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,6)" src="img/plantilla/P4-6.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,7)" src="img/plantilla/P4-7.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,8)" src="img/plantilla/P4-8.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,9)" src="img/plantilla/P4-9.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,10)" src="img/plantilla/P4-10.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,11)" src="img/plantilla/P4-11.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,12)" src="img/plantilla/P4-12.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(4,13)" src="img/plantilla/P4-13.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,1)" src="img/plantilla/P5-1.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,2)" src="img/plantilla/P5-2.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,3)" src="img/plantilla/P5-3.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,4)" src="img/plantilla/P5-4.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,5)" src="img/plantilla/P5-5.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,6)" src="img/plantilla/P5-6.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,7)" src="img/plantilla/P5-7.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,8)" src="img/plantilla/P5-8.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,9)" src="img/plantilla/P5-9.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,10)" src="img/plantilla/P5-10.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,11)" src="img/plantilla/P5-11.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(5,12)" src="img/plantilla/P5-12.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,1)" src="img/plantilla/P6-1.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,2)" src="img/plantilla/P6-2.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,3)" src="img/plantilla/P6-3.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,4)" src="img/plantilla/P6-4.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,5)" src="img/plantilla/P6-5.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,6)" src="img/plantilla/P6-6.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,7)" src="img/plantilla/P6-7.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,8)" src="img/plantilla/P6-8.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,9)" src="img/plantilla/P6-9.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,10)" src="img/plantilla/P6-10.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,11)" src="img/plantilla/P6-11.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,12)" src="img/plantilla/P6-12.svg" alt=""></li>
+                                                <li><img ondblclick="crearCanvas(6,13)" src="img/plantilla/P6-13.svg" alt=""></li>
+                                                </ul>
+					</li>
+					<li id="tab-2">
+                                            <ul id="carousel-2" class="img-carousel">
+					 	<li><img onclick="eliminarFiltro()" src="img/filtro/original.png" alt=""></li>
+					 	<li><img onclick="cargarFiltro('c0','bw')" src="img/filtro/bn.png" alt=""></li>
+					 	<li><img onclick="cargarFiltro('c0','invert')" src="img/filtro/Invertido.png" alt=""></li>
+					 	<li><img onclick="cargarFiltro('c0','sepia')" src="img/filtro/sepia.png" alt=""></li>
+					 	<li><img onclick="cargarFiltro('c0','contrast')" src="img/filtro/contraste.png" alt=""></li>
+                                            </ul>
+                                        </li>
+					<li id="tab-3">
+					 	<ul id="carousel-3" class="img-carousel">
+                                                <li><img onclick="eliminarMarco()" width="40" height="40" src="img/iconos/ICO_eliminar.svg" alt=""></li>
+                                                <li><img onclick="cargarMarco(this.src)" src="img/border1-A_Azul.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border1-A_Black.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)" src="img/border1-A_Blanco.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border1-A_Morado.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)" src="img/border1-A_Naranja.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border1-A_Rosa.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)" src="img/border2-A_azul.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)" src="img/border2-A_Blanco.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border2-A_Negro.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border2-A_Rojo.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border2-A_Rosa.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)" src="img/border2-A_verde.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)" src="img/border3-blanco.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border3-magenta.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border3-marron.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border3-morado.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border3-negro.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border3-verde.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border4_amarillo.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)" src="img/border4_blanco.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border4_ciean.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border4_magenta.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border4_verde.svg" alt=""></li>
+					 	<li><img onclick="cargarMarco(this.src)"  src="img/border4-negro.svg" alt=""></li>
+                                                </ul>
+                                        </li>    
+					<li id="tab-4">
+					 	<ul id="carousel-4" class="img-carousel">
+                                                <li><img onclick="incluiremoji(this.src)" src="img/bigotes.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/boca.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/bombillo.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/corazon.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/corazones.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/corbata.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/corona.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/corbata_lazo.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/gorro_santa.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/lentes.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/mascara.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" src="img/orejas de conejo.svg" alt=""></li>
+					 	<li><img onclick="incluiremoji(this.src)" width="40" height="40" src="img/sombrero de copa .svg" alt=""></li>
+                                                </ul>
+					</li>
+                                        
+					<li id="tab-5">
+                                            <div id="myModal" class="modal">
+                                                <!-- Modal content -->
+                                                <div class="modal-content">
+                                                <span class="close" onclick="cerrar('myModal')">&times;</span><br>
+
+                                                        <textarea cols="4" rows="4" id="texto"></textarea>
+                                                        <br>
+                                                        <select id="letra" onchange="">
+                                                                <option value= 'Kumar One' style="font-family:'Kumar One'; ">Kumar One</option>
+                                                                <option value= 'Lobster' style="font-family:'Lobster'; ">Lobster</option>
+                                                                <option value= 'Abril Fatface' style="font-family:'Abril Fatface'; ">Abril Fatface</option>
+                                                                <option value= 'Bungee Shade' style="font-family:'Bungee Shade'; ">Bungee Shade</option>
+                                                                <option value= 'Farsan' style="font-family:'Farsan';">Farsan</option>
+                                                                <option value= 'Patua One' style="font-family:'Patua One';">Patua One</option>
+                                                                <option value= 'Comfortaa' style="font-family:'Comfortaa';">Comfortaa</option>
+                                                                <option value= 'Righteous' style="font-family:'Righteous';">Righteous</option>
+                                                                <option value= 'Lobster Two' style="font-family:'Lobster Two';">Lobster Two</option>
+                                                                <option value= 'Poiret One' style="font-family:'Poiret One';">Poiret One</option>
+                                                                <option value= 'Chewy' style="font-family:'Chewy';">Chewy</option>
+                                                                <option value= 'Audiowide' style="font-family:'Audiowide';">Audiowide</option>
+                                                                <option value= 'Shrikhand' style="font-family:'Shrikhand';">Shrikhand</option>
+                                                                <option value= 'Boogaloo' style="font-family:'Boogaloo';">Boogaloo</option>
+                                                                <option value= 'Playball' style="font-family:'Playball';">Playball</option>
+                                                                <option value= 'Oleo Script' style="font-family:'Oleo Script';">Oleo Script</option>
+                                                                <option value= 'Fredoka One' style="font-family:'Fredoka One';">Fredoka One</option>
+                                                                <option value= 'Concert One' style="font-family:'Concert One';">Concert One</option>
+                                                                <option value= 'Limelight' style="font-family:'Limelight';">Limelight</option>
+                                                                <option value= 'Coda' style="font-family:'Coda';">Coda</option>
+                                                                <option value= 'Special Elite' style="font-family:'Special Elite';">Special Elite</option>
+                                                                <option value= 'Cherry Cream Soda' style="font-family:'Cherry Cream Soda';">Cherry Cream Soda</option>
+                                                                <option value= 'Bubblegum Sans' style="font-family:'Bubblegum Sans';">Bubblegum Sans</option>
+                                                                <option value= 'Roboto' style="font-family:'Roboto';">Roboto</option>
+                                                                <option value= 'Arsenal' style="font-family:'Arsenal';">Arsenal</option>
+                                                                <option value= 'Oswald' style="font-family:'Oswald';">Oswald</option>
+                                                                <option value= 'Montserrat' style="font-family:'Montserrat';">Montserrat</option>
+                                                                <option value= 'Source Sans Pro' style="font-family:'Source Sans Pro';">Source Sans Pro</option>
+                                                                <option value= 'Slabo 27px' style="font-family:'Slabo 27px';"> Slabo 27px</option>
+                                                                <option value= 'Lora' style="font-family:'Lora';">Lora</option>
+                                                                <option value= 'Noto Serif' style="font-family:'Noto Serif';">Noto Serif</option>
+                                                                <option value= 'IM Fell English SC' style="font-family:'IM Fell English SC';">IM Fell English SC</option>
+                                                                <option value= 'Taviraj' style="font-family:'Taviraj';">Taviraj</option>
+                                                                <option value= 'Tinos' style="font-family:'Tinos';">Tinos</option>
+                                                        </select>
+
+                                                        <select id="alin">
+                                                                <option value="center">Centrado</option>
+                                                                <option value="left">Left</option>
+                                                                <option value="right">Right</option>
+<!--                                                            <option value="start">Start</option>
+                                                                <option value="end">End</option>-->
+                                                        </select>
+
+                                                        <input type="number" value="26" id="tam">
+                                                        <input type="color" value="#f3f3f3" name="color" id="color" onchange="">
+
+                                                        <input id="text" type="button" name="texto" value="Agregar texto" onclick="cargarTexto()">
+
+                                                </div>
+                                            </div>
+					</li>
+                                        <li id="tab-6">
+                                            <ul id="carousel-6" class="img-carousel">
+                                                <li><img onclick="" src="img/iconos/ICO_editar.svg" alt=""></li>
+                                                <li><img onclick="" src="img/iconos/ICO_eliminar.svg" alt=""></li>
+                                                <li><img onclick="" src="img/iconos/ICO_insertar.svg" alt=""></li>
+                                                <li><img onclick="" src="img/iconos/ICO_rotar.svg" alt=""></li>
+                                                <li><img onclick="" src="img/iconos/ICO_zoom in.svg" alt=""></li>
+                                                <li><img onclick="" src="img/iconos/ICO_zoom out.svg" alt=""></li>
+                                            </ul>	
+                                        </li>
+					
+				</ul>
+
+				<ul class="tabs icon-tabs">
+					<li class="current" data-tab="tab-1">
+						<div class="icon-tab">
+							<i class="icon-grids"></i>
+							<span>Plantillas</span>
+						</div>
+					</li>
+					<li data-tab="tab-2">
+						<div class="icon-tab">
+							<i class="icon-filters"></i>
+							<span>Filtros</span>
+						</div>
+					</li>
+					<li data-tab="tab-3">
+						<div class="icon-tab">
+							<i class="icon-frames"></i>
+							<span>Marcos</span>
+						</div>
+					</li>
+					<li data-tab="tab-4">
+						<div class="icon-tab">
+							<i class="icon-emojis"></i>
+							<span>Emojis</span>
+						</div>
+					</li>
+					<li data-tab="tab-5">
+                                            <div class="icon-tab" onclick="addTexto()">
+							<i class="icon-texts"></i>
+							<span>Textos</span>
+						</div>
+					</li>
+<!--					<li data-tab="tab-6">
+                                            <div class="icon-tab" onclick="">
+							<i class="icon-texts"></i>
+							<span>Editar</span>
+						</div>
+					</li>-->
+				</ul>
+			</div>
+
+			<div class="v-spacing-50 tac">
+                            <a href="#" onclick="guardar()" class="button">Continuar</a>
+			</div>
+		</div>
+	</div>
+    <div id="step3" style="display: none" class="main-section clearfix">
+		<div class="wrap">
+
+                    <div id="image" class="preview-img">
+                        <a href="#" onclick="editar()" class="edit-button">Volver al editor <i class="icon-edit"></i></a>
+                           
+
+				
+			</div>
+
+			<div class="form-1 p20">
+                            <form id="form" action="" method="post" enctype="multipart/form-data">
+					<label class="input-label">
+						<div class="input-title">Dale un t�tulo a tu publicaci�n...</div>
+                                                <input id="titulo" type="text" name="titulo">
+					</label>
+					<label class="input-label">
+						<div class="input-title">A�ade un comentario...</div>
+                                                <textarea id="descripcion" name="descripcion" placeholder="(Opcional)"></textarea>
+					</label>
+
+					<div class="section-title mt20">Compartir en:</div>
+                                        <div  class="clearfix pl20">
+						<div class="col-6 pr10"><div class="input-title">Sitio tem�tico</div></div>
+						<div class="col-6 pl10"><div class="input-title">Categor�a</div></div>
+						<ul id="datos" class="dynamic-selects-list">
+                                                    
+                                                    <li>
+                                                        
+                                                        <div class="col-6 pr10">
+                                                            <label class="input-label">
+                                                                <select id="sites" onchange="categoria([1165, 1353, 1167],this.value)">
+                                                                    <option value="">Seleccionar</option>
+                                                    <option value="1165">Venezuela Digitel, AlmaGu�a</option>			
+                                                    <option value="1353">Republica Dominica Claro, AlmaGu�a</option>			
+                                                    <option value="1167">Panama Claro, AlmaGu�a</option>			
+                                                    </select>
+                                                        </label>
+                                                        </div>
+                                                        
+                                                        <div class="col-6 pl10">
+									<label class="input-label">
+                                                                                    <select id="s1165" style="display: none;"><option value="17251">Marcos Fidel</option>
+                                                        </select>
+									</label>
+                                                           </div><div class="col-6 pl10">
+									<label class="input-label">
+                                                                                    <select id="s1353" style="display: none;"><option value="17251">Marcos Fidel</option>
+                                                        </select>
+									</label>
+                                                           </div><div class="col-6 pl10">
+									<label class="input-label">
+                                                                                    <select id="s1167" style="display: none;"><option value="17251">Marcos Fidel</option>
+                                                        </select>
+									</label>
+                                                           </div><div onclick="add()" class="add-button">+</div>
+                                                    </li>
+						</ul>
+					</div>
+				</form>
+			</div>
+
+			<div class="v-spacing-50 tac">
+                            <div id="cargando2" class="modal">
+                                <img style="display: block; margin: auto;" src="img/cargando.gif"> 
+                            </div>
+                            <div id="resp" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div id="cont">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                                <input id="flag" type="hidden" value="0">
+				<a onclick="enviar(event)" href="#" class="button">Publicar</a>
+			</div>
+		</div>
+	</div>
+
+    <script type="text/javascript">
+        
+    </script>
+	<script type="text/javascript" src="js/meme2.js"></script>
+        <script src="js/lib/alertify/alertify.js"></script>
+</body>
+</html>

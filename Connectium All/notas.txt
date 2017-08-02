@@ -1,0 +1,12 @@
+vidafit: 
+	smart: 1356,1355,1357,1358,1359
+	basico: 1356,1355,1357,1358,1359
+
+
+Almaguia: 1167,1151,1353,1165,1166
+
+Alamano: 893,926,927,1052
+
+Lealtad: todavia no hay Site para este portal
+
+/opt/cntm/htdocs/prueba.conectium.com/amcConectiumMilton/Crowdsourcing

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Crowsourcing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap-4.0.0-alpha.6/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/lib/jquery-2.2.0.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+        <link rel="stylesheet" href="js/lib/slick/slick.css">
+	<script src="js/lib/slick/slick.min.js"></script>
+	<script src="js/lib/slick/config.js"></script>
+	<script src="js/helpers.js"></script>
+        <link rel="stylesheet" href="js/lib/alertify/alertify.css">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Arsenal|Audiowide|Boogaloo|Bubblegum+Sans|Bungee+Shade|Cherry+Cream+Soda|Chewy|Coda|Comfortaa|Concert+One|Farsan|Fredoka+One|IM+Fell+English+SC|Kumar+One|Limelight|Lobster|Lobster+Two|Lora|Montserrat|Noto+Serif|Oleo+Script|Oswald|Patua+One|Playball|Poiret+One|Righteous|Roboto|Shrikhand|Slabo+27px|Source+Sans+Pro|Special+Elite|Taviraj|Tinos" rel="stylesheet">
+</head>
+<body onload="asignarHijoC(get('canvas'),'c0',0,0,0,0);organizarCanvas(1,1);asignarInput(1);valCategoria(1);">
+	<div class="head">
+<!--		<img src="img/logo.png" alt="Logo" class="logo">-->
+
+		<a href="../session.jsp" class="sign-button">Sign out</a>
+	</div>
+	<div id="step2" class="main-section clearfix">
+		<div class="wrap">
+
+            <div class="v-spacing-10"></div>
+
+            <div class="center-component">
+                <div>
+                    Que Deseas Publicar
+                    <table style="width:100%">
+                        <tr>
+                            <td>A</td>
+                            <td>M</td>
+                            <td>P</td>
+                            <td>U</td>
+                            <td>M</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+			<div class="v-spacing-50 tac">
+                            <a href="#" onclick="guardar()" class="button">Continuar</a>
+			</div>
+		</div>
+	</div>
+    <div id="step3" style="display: none" class="main-section clearfix">
+		<div class="wrap">
+
+                    <div id="image" class="preview-img">
+                        <a href="#" onclick="editar()" class="edit-button">Volver al editor <i class="icon-edit"></i></a>
+
+
+
+			</div>
+
+			<div class="form-1 p20">
+                            <form id="form" action="" method="post" enctype="multipart/form-data">
+					<label class="input-label">
+						<div class="input-title">Dale un t�tulo a tu publicaci�n...</div>
+                                                <input id="titulo" type="text" name="titulo">
+					</label>
+					<label class="input-label">
+						<div class="input-title">A�ade un comentario...</div>
+                                                <textarea id="descripcion" name="descripcion" placeholder="(Opcional)"></textarea>
+					</label>
+
+					<div class="section-title mt20">Compartir en:</div>
+                                        <div  class="clearfix pl20">
+						<div class="col-6 pr10"><div class="input-title">Sitio tem�tico</div></div>
+						<div class="col-6 pl10"><div class="input-title">Categor�a</div></div>
+						<ul id="datos" class="dynamic-selects-list">
+
+                                                    <li>
+
+                                                        <div class="col-6 pr10">
+                                                            <label class="input-label">
+                                                                <select id="sites" onchange="categoria([1165, 1353, 1167],this.value)">
+                                                                    <option value="">Seleccionar</option>
+                                                    <option value="1165">Venezuela Digitel, AlmaGu�a</option>
+                                                    <option value="1353">Republica Dominica Claro, AlmaGu�a</option>
+                                                    <option value="1167">Panama Claro, AlmaGu�a</option>
+                                                    </select>
+                                                        </label>
+                                                        </div>
+
+                                                        <div class="col-6 pl10">
+									<label class="input-label">
+                                                                                    <select id="s1165" style="display: none;"><option value="17251">Marcos Fidel</option>
+                                                        </select>
+									</label>
+                                                           </div><div class="col-6 pl10">
+									<label class="input-label">
+                                                                                    <select id="s1353" style="display: none;"><option value="17251">Marcos Fidel</option>
+                                                        </select>
+									</label>
+                                                           </div><div class="col-6 pl10">
+									<label class="input-label">
+                                                                                    <select id="s1167" style="display: none;"><option value="17251">Marcos Fidel</option>
+                                                        </select>
+									</label>
+                                                           </div><div onclick="add()" class="add-button">+</div>
+                                                    </li>
+						</ul>
+					</div>
+				</form>
+			</div>
+
+			<div class="v-spacing-50 tac">
+                            <div id="cargando2" class="modal">
+                                <img style="display: block; margin: auto;" src="img/cargando.gif">
+                            </div>
+                            <div id="resp" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div id="cont">
+
+                                    </div>
+                                </div>
+                            </div>
+                                <input id="flag" type="hidden" value="0">
+				<a onclick="enviar(event)" href="#" class="button">Publicar</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+    <script type="text/javascript">
+        
+    </script>
+	<script type="text/javascript" src="js/meme2.js"></script>
+        <script src="js/lib/alertify/alertify.js"></script>
+    <script src="css/bootstrap-4.0.0-alpha.6/dist/js/bootstrap.js"></script>
+
+</body>
+</html>

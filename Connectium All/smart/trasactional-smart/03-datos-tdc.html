@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>+ Móvil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style-almaguia-unificado.css">
+ 	<script src="js/lib/jquery-2.2.0.min.js" type="text/javascript"></script>
+ 	<script src="js/lib/jquery-ui-1.12.1.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+	<link rel="stylesheet" href="js/lib/datebox/jtsage-datebox.min.css">
+	<script src="js/lib/datebox/jtsage-datebox.min.js"></script>
+	<script src="js/lib/datebox/config.js"></script>
+	<script src="js/lib/formvalidator/jquery.form-validator.min.js"></script>
+	<script src="js/helpers.js"></script>
+
+	<script type="text/javascript">
+
+	</script>
+	<style type="text/css">
+		.ui-overlay-shadow{
+
+		}
+		.ui-datebox-flipcontent div {
+			 margin-left: 0px;
+			 margin-right: 0px;
+			width: 80px;
+			height: 120px;
+			display: inline-block;
+			text-align: center;
+			zoom: 1;
+			overflow: hidden;
+			cursor: move;
+		}
+		.ui-state-active{
+			background-color: #9ca5ec;
+			color:#ffffff;
+			margin-top: -7px;
+		}
+		.ui-state-active > span{
+			padding-top: 6px;
+		}
+	</style>
+</head>
+<body class="background">
+
+<!-- Layout -->
+<div class="main-bar">
+	<div class="head">
+		<span class="navicon icon-menu"></span>
+		<img src="images/logotipo-masmovil.png" alt="Logotipo +móvil" class="logo">
+		<span class="search-button icon-search"></span>
+	</div>
+
+	<div class="primary-menu">
+		<div class="user">
+			<div class="picture">
+				<img src="images/avatar.jpg">
+			</div>
+			<div class="name">Jhon Doe</div>
+		</div>
+
+		<ul class="navigation"></ul>
+
+		<div class="footer-menu">
+			<img src="images/logo-grayscale.png" alt="Logotipo +movil" class="logo">
+			<p>Copyright 2016 - Reservados todos los derechos</p>
+			<a href="">Términos del servicio</a>
+		</div>
+	</div>
+
+	<div class="search-box">
+		<form action="" class="search-form">
+			<input type="text" class="input-search" placeholder="Buscar...">
+			<button class="search-btn icon-search"></button>
+		</form>
+		<span class="icon-arrow_back close-button"></span>
+	</div>
+
+	<div class="notification-bar">Hola <b>Jhon</b>, buenos días</div>
+
+</div>
+
+<!-- Fin layout -->
+
+
+<div class="main-section">
+
+
+	<div class="floating-bar" style="z-index: 11">
+		<a href="" class="icon-arrow_back button-back"></a>
+		<p class="main-title align" style="font-weight: bold;">Modulo de pago</p>
+	</div>
+	<div class="v-spacing-10">
+	<div class="width-dinamic center">
+		<table class="width-dinamic option-transaction" cellspacing="0" cellpadding="0">
+			<tr>
+				<td align="center">
+					<p>DATOS TARJETA DE CRÉDITO</p>
+					<div class="underline-section selected">
+						<div>&nbsp;</div>
+					</div>
+				</td>
+				<td align="center">
+					<p>CONFIRMACION DE DATOS</p>
+					<div class="underline-section">
+						<div>&nbsp;</div>
+					</div>
+				</td>
+				<td align="center">
+					<p>TRANSACCIÓN EXITOSA</p>
+					<div class="underline-section">
+						<div>&nbsp;</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="wrap">
+		<form class="form" action="">
+
+			<div class="separation"></div>
+
+			<div class="align-element">
+				<img class="image-icon-2" src="images/svg-icons-2/visa.svg">
+				<img class="image-icon-2" src="images/svg-icons-2/mastercard.svg">
+				<img class="image-icon-2" src="images/svg-icons-2/american.svg">
+			</div>
+
+			<div class="v-spacing-10"></div>
+
+			<table class="width-dinamic form-transactional">
+				<tr toTitle="titular"><td /><td><span></span></td></tr>
+				<tr fromTitle="titular">
+					<td align="center">
+						<img src="images/transactional/datos_personales.svg" class="form-icon-transactional"/>
+					</td>
+					<td>
+						<label class="">
+							<input class="input-radius-transactional" type="text" placeholder="Nombre Titular" value="" data-validation="required">
+						</label>
+					</td>
+				</tr>
+				<tr toTitle="num"><td /><td><span></span></td></tr>
+				<tr fromTitle="num">
+					<td />
+					<td>
+						<label class="">
+							<input class="input-radius-transactional" type="text" placeholder="Numero de tarjeta de credito" value="" data-validation="required">
+						</label>
+					</td>
+				</tr>
+				<tr toTitle="ced"><td /><td><span></span></td></tr>
+				<tr fromTitle="ced">
+					<td />
+					<td>
+						<label class="">
+							<input class="input-radius-transactional" type="text" placeholder="Cedula de identidad" value="" data-validation="required">
+						</label>
+					</td>
+				</tr>
+				<tr toTitle="numero"><td /><td><span></span></td></tr>
+				<tr fromTitle="numero">
+					<td align="center">
+						<img src="images/transactional/celdatos.svg" class="form-icon-transactional" style="width: 17px;"/>
+					</td>
+					<td>
+						<label class="">
+							<input class="input-radius-transactional" type="text" placeholder="Numero de telefono" value="" data-validation="required">
+						</label>
+					</td>
+				</tr>
+				<tr toTitle="codigo"><td /><td><span></span></td></tr>
+				<tr fromTitle="codigo">
+					<td align="center">
+						<img src="images/transactional/tarjeta_datos.svg" class="form-icon-transactional"/>
+					</td>
+					<td>
+						<label class="">
+							<input class="input-radius-transactional" type="text" placeholder="Codigo de seguridad CVV" value="" data-validation="required">
+						</label>
+					</td>
+				</tr>
+				<tr toTitle="fecha"><td /><td><span></span></td></tr>
+				<tr fromTitle="fecha">
+					<td align="center">
+						<img src="images/transactional/calendariodatos.svg" class="form-icon-transactional"/>
+					</td>
+					<td>
+						<label class="">
+							<input class="input-radius-transactional datebox-1" type="text" placeholder="Fecha de vencimiento" value="" data-validation="required">
+						</label>
+					</td>
+				</tr>
+
+			</table>
+
+			<div class="v-spacing-20"></div>
+
+			<div class="align-element-right">
+				<span class="font-p">Total a pagar:</span>
+			</div>
+
+			<div class="width-dinamic">
+				<table class="align-right margin-auto-right" cellpadding="5" cellspacing="5">
+					<tr>
+						<td align="left">
+							<div class="">
+								<span class="font-q">Sub total</span>
+							</div>
+						</td>
+						<td align="left">
+							<span class="font-r">Bs.6.000,00</span>
+						</td>
+					</tr>
+					<tr>
+						<td align="left">
+							<div class="align-element-right">
+								<span class="font-q">IVA</span>
+							</div>
+						</td>
+						<td align="left">
+							<div class="">
+								<span class="font-r">Bs.840,00</span>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td/>
+						<td>
+							<span class="price-c">BS 7.000</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+
+
+
+
+
+
+
+			<div class="separation"></div>
+
+			<div class="align-element">
+				<div class="checkbox-center">
+					<ul class="checkbox-list">
+						<li><label><input type="checkbox"><i class="icon-checkbox transactional"></i><a href="javascript:void(0)" class="term-link-transactional">Terminos y condiciones</a></label></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="v-spacing-20"></div>
+
+			<div class="text-center">
+				<button class="button raised primary-color show-hide-pass color-personal">Pagar</button>
+			</div>
+		</form>
+	</div>
+
+
+	<!-- pop-up -->
+	<div id="pop-up-transactional" class="favorite" style="display: none">
+
+		<div class="v-spacing-20"></div>
+		<div class="container">
+			<div class="row origin">
+				<div class="col-xs-12 col-sm-12 col-md-12 width-dinamic">
+					<div class="width-dinamic-80">
+						<div class="v-spacing-20"></div>
+						<div class="tem-and-condition">
+							Términos y condiciones
+						</div>
+						<div class="v-spacing-10"></div>
+						<div class="tem-and-condition subtitle-term">
+							Loren upsum dolor sit amet, consetuater disiping editm set adad slkjo manumy nigh esidn intid uty larote dolore magma danli erta bolia Loren upsum dolor sit amet, consetuater disiping editm set adad slkjo manumy nigh esidn intid uty larote dolore magma danli erta bolia Loren upsum dolor sit amet, consetuater disiping editm set adad slkjo manumy nigh esidn intid uty larote dolore magma danli erta bolia Loren upsum dolor sit amet, consetuater disiping editm set adad slkjo manumy nigh esidn intid uty larote dolore magma danli erta bolia Loren upsum dolor sit amet, consetuater disiping editm set adad slkjo manumy nigh esidn intid uty larote dolore magma danli erta bolia
+							<br><br>
+							Loren upsum dolor sit amet, consetuater disiping editm set adad slkjo manumy nigh esidn intid uty larote dolore magma danli erta bolia Loren upsum dolor sit amet, consetuater disiping editm set adad slkjo manumy nigh esidn intid uty larote dolore magma danli erta bolia Loren upsum dolor sit amet, consetuater disiping editm set adad slkjo manumy nigh esidn intid uty larote dolore magma danli erta bolia
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+<script src="js/lib/formvalidator/config.js"></script>
+<script src="js/lib/inits/init.js"></script>
+
+<script type="text/javascript">
+	AppInit.formDinamicContent();
+	AppInit.popup();
+</script>
+</body>
+</html>

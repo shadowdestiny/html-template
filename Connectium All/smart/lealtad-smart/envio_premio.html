@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>+ Móvil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style-lealtad.css">
+	<!--nuevos-->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<!---->
+ 	<script src="js/lib/jquery-2.2.0.min.js" type="text/javascript"></script>
+ 	<script src="js/lib/jquery-ui-1.12.1.min.js"></script>
+ 	<script src="js/lib/formvalidator/jquery.form-validator.min.js"></script>
+	<script src="js/helpers.js"></script>
+</head>
+<body>
+
+<!-- Layout -->
+<div class="main-bar">
+	<div class="head-3 head">
+		<span class="navicon icon-menu"></span>
+		<img src="images/almaguia.png" alt="Logotipo +móvil" class="logo">
+		<span class="search-button icon-search"></span>
+	</div>
+
+	<div class="primary-menu">
+		<div class="user">
+			<div class="picture">
+				<img src="images/avatar.jpg">
+			</div>
+			<div class="name">Jhon Doe</div>
+		</div>
+
+		<ul class="navigation"></ul>
+
+		<div class="footer-menu">
+			<img src="images/almaguia.png" alt="Logotipo +movil" class="logo">
+			<p>Copyright 2016 - Reservados todos los derechos</p>
+			<a href="">Términos del servicio</a>
+		</div>
+	</div>
+
+	<div class="search-box">
+		<form action="" class="search-form">
+			<input type="text" class="input-search" placeholder="Buscar...">
+			<button class="search-btn icon-search"></button>
+		</form>
+		<span class="icon-arrow_back close-button"></span>
+	</div>
+
+	<div class="notification-bar-border-2">Saludo personalizado <a href="#">Mi Perfil</a></div>
+</div>
+
+<!-- Fin layout -->
+
+<div class="main-section top-section-2">
+	<div class="wrap">
+		<div class="section-subtitle-trivia-4"><p>¡FELICIDADES!</p></div>
+		<div class="text-center text-normal msj-trivia v-spacing-20  col-xs-12"><p>Has canjeado tus puntos con éxito, necesitamos algunos datos para poder realizar el envió de tu premio.</p></div>
+		<!--Inicio Form-->
+
+		<form class="form-style" action="#">
+			<div class="form-group col-xs-2">
+		  		<label for="">Nombre:</label>
+		  	</div>
+		 	<div class="form-group col-xs-5">
+		  		<input type="text" class="form-control">
+		  	</div>
+		  	<div class="form-group col-xs-2">
+		  		<label for="">Cédula:</label>
+		  	</div>
+		 	<div class="form-group col-xs-3">
+		  		<input type="text" class="form-control">
+		  	</div>
+		  	<div class="form-group col-xs-2">
+		  		<label for="">Email:</label>
+		  	</div>
+		 	<div class="form-group col-xs-5">
+		  		<input type="text" class="form-control">
+		  	</div>
+		  	<div class="form-group col-xs-2">
+		  		<label for="">Envío:</label>
+		  	</div>
+		 	<div class="form-group col-xs-3">
+		  		<select class="form-control">
+				  <option>MRW</option>
+				  <option>ZOOM</option>
+				  <option>DOMESA</option>
+				</select>
+		  	</div>
+		  	<div class="form-group col-xs-2">
+		  		<label for="">Estado:</label>
+		  	</div>
+		 	<div class="form-group col-xs-5">
+		  		<select class="form-control">
+				  <option>Distrito Capital</option>
+				  <option>Miranda</option>
+				  <option>Trujillo</option>
+				</select>
+		  	</div>
+		  	<div class="form-group col-xs-2">
+		  		<label for="">Ciudad:</label>
+		  	</div>
+		 	<div class="form-group col-xs-3">
+		  		<select class="form-control">
+				  <option>Caracas</option>
+				  <option>Municipio Libertador</option>
+				</select>
+		  	</div>
+		  	<div class="form-group col-xs-12">
+			  	<select multiple class="form-control">
+				  <option>1 Sucursal</option>
+				  <option>2 Sucursal</option>
+				  <option>3 Sucursal</option>
+				  <option>4 Sucursal</option>
+				  <option>5 Sucursal</option>
+				</select>
+			</div>
+			<ul class="checkbox-list no-padding">
+				<li><label><input type="checkbox"><i class="icon-check icon-checkbox"></i>Deseo guardar esta dirección como predeterminada</label></li>
+			</ul>
+			<div class="btn-new btn-grande text-center v-spacing-20">
+					<button data-toggle="modal" data-target="#myModal" class="btn btn-azules">Aceptar</button>
+			</div>
+			
+		 
+		</form>
+	<!--Fin Form-->
+			<div id="myModal" class="modal fade btn-new" tabindex="-1" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h4 class="modal-title">Confirmación</h4>
+			      </div>
+			      <div class="modal-body">
+			        <p>¿Estas seguro de enviar tu premio a la dirección seleccionada?</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+			        <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#myModalsi">Si</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+
+			<div id="myModalsi" class="modal fade btn-new" tabindex="-1" role="dialog">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h4 class="modal-title">¡Muchas Gracias!</h4>
+			      </div>
+			      <div class="modal-body">
+			        <p>Lealtad premia tu fidelidad. Sigue acumulando puntos para ganar mas premios</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+
+			
+			</div>
+		</div>
+
+
+</body>
+</html>
+<script>
+	$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus();
+})
+
+$('#myModalsi').on('shown.bs.modal', function () {
+  $('#myInput').focus();
+})
+
+</script>
+ 	<script src="bootstrap/js/bootstrap.js"></script>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>ALAMANO</title>
+	<link rel="shortcut icon" href="banners/sites/null">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style-vidafit-unificado.css">	
+	<script src="js/lib/jquery-2.2.0.min.js"></script>
+	<script src="js/lib/jquery-ui-1.12.1.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+<!--
+	<link rel="stylesheet" href="js/lib/datebox/jtsage-datebox.min.css">
+-->
+	<script src="js/lib/datebox/jtsage-datebox.min.js"></script>
+	<script src="js/lib/datebox/config.js"></script>
+<!--
+    <link rel="stylesheet" href="js/lib/alertify/alertify.css">
+-->
+	<script src="js/lib/formvalidator/jquery.form-validator.min.js"></script>
+	<script src="js/helpers.js"></script>                                     
+        <script>            
+                     // Boton registrar
+                     
+                     function validars(){                        
+                         //Se obtiene el valores de los campos 
+                         var prefijo = $('#prefijo').val();                       
+                         var telefono = $('#telefono').val();
+                                                 
+                                                                                                
+                                          if (telefono == '') {
+                                              alertify.log("Coloca el n&uacute;mero de tu Tel&eacute;fono para registrarte");
+                                              $("#telefono").focus();
+                                              return false;
+                                          }
+
+
+                                          if (telefono.length !=8) {
+                                              alertify.log("El n&uacute;mero de Tel&eacute;fono debe tener "+8+" d&iacute;gitos");
+                                              $("#telefono").focus();
+                                              return false;
+                                           }
+
+                                            window.location.href="smsMovistart.jsp?s=1358&o=71&prefijo="+prefijo.substring(1)+"&telefono="+telefono;
+                                                                              
+ 
+                     }
+
+                    function enviar(){
+                        var hora = $('#hora').val();
+                        var fecha = $('#fecha').val();
+                        
+                        if(hora!=null && fecha!=null){
+
+                        if(fecha != '' && hora != '') {
+                            $.getJSON("info_landing.jsp?s=1358&h="+hora+"&f="+fecha+"&tagmode=any&format=json&jsoncallback=?",
+                            function(data){
+                            if(data.resul == 1){
+                                window.location.href="http://wap.alamano.com/sbk/registroSuscriptor.jsp?s=1358&o=71";
+                              }
+                            }).
+                            fail(function( jqxhr, textStatus, error ) {
+                                window.location.href="http://wap.alamano.com/sbk/registroSuscriptor.jsp?s=1358&o=71";
+                            });
+                                
+                        }
+                        else{
+                        window.location.href="http://wap.alamano.com/sbk/registroSuscriptor.jsp?s=1358&o=71";
+                        }
+                        }
+                        else{
+                         window.location.href="http://wap.alamano.com/sbk/registroSuscriptor.jsp?s=1358&o=71";
+                     }
+                     }                                   
+	             </script> 
+</head>
+<body class="landing-page">
+
+<div class="main-section">
+	<div class="wrap">
+		<h1 class="main-title">El secreto para lograrlo�. Es Comenzando</h1>
+                <img src="" alt="" class="responsive-img">
+                        <h2 class="subtitle">Ingresa a Vidafit! Y encuentra los mejores tutoriales con rutinas que se adaptan a tu estilo.</h2>
+		<div class="description">
+			<p></p>
+			</div>
+
+                <div class="form-2">
+
+			<div class="x2 input-container">
+                                <div class="x2-left">
+             <select id="prefijo" name="prefijo">
+				<option value="507">507</option>
+				</select>
+				</div>
+				<div class="x2-right"><label><input type="text"  id="telefono" data-validation="required number" value=""></label></div>
+                                
+                                </div><div class="text-center v-spacing-30">
+                                     <button class="button raised primary-color" id="validar" name="validar" onclick="validars()">Validar</button> 
+                                    
+                                     </div>
+		</div>
+
+	</div>
+</div>
+<script src="js/lib/alertify/alertify.js"></script>
+<script src="js/lib/formvalidator/config.js"></script>
+</body>
+</html>

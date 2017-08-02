@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>+ Móvil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style-almaguia-unificado.css">
+ 	<script src="js/lib/jquery-2.2.0.min.js" type="text/javascript"></script>
+ 	<script src="js/lib/jquery-ui-1.12.1.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+	<script src="js/lib/formvalidator/jquery.form-validator.min.js"></script>
+	<script src="js/helpers.js"></script>
+</head>
+<body>
+
+<!-- Layout -->
+<div class="main-bar">
+	<div class="head">
+		<span class="navicon icon-menu"></span>
+		<img src="images/logotipo-masmovil.png" alt="Logotipo +móvil" class="logo">
+		<span class="search-button icon-search"></span>
+	</div>
+
+	<div class="primary-menu">
+		<div class="user">
+			<div class="picture">
+				<img src="images/avatar.jpg">
+			</div>
+			<div class="name">Jhon Doe</div>
+		</div>
+
+		<ul class="navigation"></ul>
+
+		<div class="footer-menu">
+			<img src="images/logo-grayscale.png" alt="Logotipo +movil" class="logo">
+			<p>Copyright 2016 - Reservados todos los derechos</p>
+			<a href="">Términos del servicio</a>
+		</div>
+	</div>
+
+	<div class="search-box">
+		<form action="" class="search-form">
+			<input type="text" class="input-search" placeholder="Buscar...">
+			<button class="search-btn icon-search"></button>
+		</form>
+		<span class="icon-arrow_back close-button"></span>
+	</div>
+
+	<div class="notification-bar">Mensaje configurable</div>
+
+</div>
+
+<!-- Fin layout -->
+
+
+<div class="main-section">
+		
+	<form class="form-2" action="">
+		<h2 class="section-title">Espacio para carga de wallpapers</h2>
+		<h2 class="section-title-2">Escoge el contenido que deseas compartir</h2>
+		<div class="wrap">
+
+			<div class="upload-img">
+				<div class="img-preview">
+					<img id="uploadPreview1" src="images/default-img.jpg">
+				</div>
+				<label for="uploadImage1"></label>
+			</div>
+
+			<div class="text-center v-spacing-20">
+				<label class="button upload-button primary-color">
+					Seleccionar archivo
+					<input id="uploadImage1" type="file"/>
+				</label>
+			</div>
+
+			<label class="input-label">
+				<input type="text" placeholder="Título">
+			</label>
+			<label class="input-label">
+				<textarea placeholder="Descripción"></textarea>
+			</label>
+			<label class="input-label">
+				<select>
+					<option value="">Categorías</option>
+					<option value="">Amor</option>
+					<option value="">Diversión</option>
+					<option value="">Ocio</option>
+				</select>
+			</label>
+			
+			
+		</div>
+		
+		<div class="split"></div>
+
+		<h2 class="section-title">Espacio para carga de chistes gráficos</h2>
+		<h2 class="section-title-2">Escoge el contenido que deseas compartir</h2>
+		<div class="wrap">
+
+			<div class="upload-img">
+				<div class="img-preview">
+					<img id="uploadPreview2" src="images/default-img.jpg">
+				</div>
+				<label for="uploadImage2"></label>
+			</div>
+
+			<div class="text-center v-spacing-20">
+				<label class="button upload-button primary-color">
+					Seleccionar archivo
+					<input id="uploadImage2" type="file"/>
+				</label>
+			</div>
+
+			<label class="input-label">
+				<input type="text" placeholder="Título">
+			</label>
+			<label class="input-label">
+				<textarea placeholder="Descripción"></textarea>
+			</label>
+			<label class="input-label">
+				<select>
+					<option value="">Categorías</option>
+					<option value="">Amor</option>
+					<option value="">Diversión</option>
+					<option value="">Ocio</option>
+				</select>
+			</label>
+			
+			
+		</div>
+		
+		<div class="split"></div>
+
+		<h2 class="section-title">Espacio para carga de Funny Video</h2>
+		<div class="wrap">
+			<label class="input-label" style="margin-top: 10px;">
+				<input type="text" placeholder="Agrega una URL"></input>
+			</label>
+		</div>
+
+		<div class="split"></div>
+		
+		<div class="wrap">
+			<ul class="checkbox-list">
+				<li><label><input type="checkbox"><i class="icon-checkbox"></i>Este contenido no es seguro para el trabajo</label></li>
+				<li><label><input type="checkbox"><i class="icon-checkbox"></i>Acepto que este contenido es de mi autoría y está libre de derechos de autor de terceros. El contenido no discrimina.</label></li>
+			</ul>
+			
+			<div class="text-center v-spacing-20">
+				<button class="button raised primary-color">Subir contenido</button>
+			</div>
+		</div>
+
+	</form>
+
+
+</div>
+<script src="js/lib/formvalidator/config.js"></script>
+</body>
+</html>

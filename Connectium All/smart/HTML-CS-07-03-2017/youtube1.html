@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Crowsourcing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="js/lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/style-almaguia-unificado.css">
+	<link rel="stylesheet" href="css/icomoon/style.css">
+	<script src="js/lib/jquery-2.2.0.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+	<script src="js/helpers.js"></script>
+</head>
+<body>
+	<div class="head">
+		<div class="head-logo">
+			<img src="img/logo.png" alt="Logo">
+		</div>
+		<a href="#" class="sign-button-left">Volver</a>
+		<a href="#" class="sign-button">Sign out</a>
+	</div>
+	<div class="main-section clearfix">
+		<div class="wrap width">
+			<!--<div class="v-spacing-10 tac"></div>-->
+
+			<div class="tab-set-1 ">
+				<form id="send-video">
+					<div class="container">
+						<div class="rows padding no-border-t text-center">
+							<div class="option-top-video">
+								<table class="text-center" align="center">
+									<tr>
+										<td align="center">
+											<a href="#">
+												<div class="icon-menu-format icon-youtube selected"></div>
+											</a>
+										</td>
+										<td align="center">
+											<a href="javascript:void(0)" onclick="$('#file').trigger('click')">
+												<div class="icon-menu-format icon-image"></div>
+											</a>
+											<input id="file" type="file" size="120" style="display: none"/>
+										</td>
+										<td align="center">
+											<a href="#">
+												<div class="icon-menu-format icon-rec"></div>
+											</a>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+						<div class="rows padding no-border-t text-center">
+							<input class="standar-width-cs" type="text" placeholder="Ingresa la URL de youtube">
+						</div>
+
+						<div class="rows padding no-border-t text-center">
+							<iframe width="320" height="180" src="https://www.youtube.com/embed/1Mlhnt0jMlg" frameborder="0" allowfullscreen></iframe>
+						</div>
+
+						<div class="rows padding no-border-t text-center">
+							<input class="standar-width-cs" type="text" placeholder="Dale un titulo atu publicacion">
+						</div>
+
+						<div class="rows padding no-border-t text-center" >
+							<textarea class="standar-width-cs" placeholder="Añade un comentario"></textarea>
+						</div>
+
+						<div class="rows padding no-border-t text-center" >
+
+							<div class="content-form text-center">
+								<div class="text-left">
+									<lavel>
+										<strong>Compartir en:</strong>
+									</lavel>
+								</div>
+								<table class="width-relative-2">
+									<tr>
+										<td class="text-left">
+											Sitio Tematico
+										</td>
+										<td>
+											Categoria
+										</td>
+									</tr>
+									<tr>
+										<td class="text-left">
+											+
+											<select style="width:146px">
+												<option>Seleccionar</option>
+											</select>
+										</td>
+										<td/>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="v-spacing-50 tac">
+		<a id="button-1" href="javascript:void(0)" class="button" onclick="$('#send-video').submit()">Publicar</a>
+	</div>
+
+	<script src="js/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

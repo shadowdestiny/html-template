@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alertify</title>
+	<script src="js/lib/jquery-2.2.0.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Incluir el llamado al CSS de la librería. El llamado al JS se debe hacer antes del cierre del body-->
+	<link rel="stylesheet" href="js/lib/alertify/alertify.css">
+
+	<!--  -->
+
+	<style>
+		body {text-align: center;width: 100%; max-width: 600px; margin:auto;}
+		h1,h2 {display: block;margin-bottom: 50px;}
+		button {margin-bottom: 30px; background: #D8D8D8;border-radius: 3px;padding: 10px 20px;border:none;cursor: pointer;}
+	</style>
+
+	<!-- Hacemos el llamado a las funciones para activar los diálogos según la acción que se quiera. -->
+	<!-- Para este ejemplo, lo hacemos con el evento click.  -->
+	<!-- DOCUMENTACION https://alertifyjs.org/-->
+
+</head>
+<body>
+	<h1>Alertas del sistema.</h1>
+	<h2>Diálogos</h2>
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Alerta</p>
+	<button id="alert">Click</button>
+
+	<script>
+		$('#alert').click(function(){
+			alertify.alert("Message");
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Confirmación</p>
+	<button id="confirm">Click</button>
+
+	<script>
+		$('#confirm').click(function(){
+			alertify.confirm("Message", function () {
+			    // user clicked "ok"
+			}, function() {
+			    // user clicked "cancel"
+			});
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Confirmación con log callback</p>
+	<button id="confirm2">Click</button>
+
+	<script>
+		$('#confirm2').click(function(){
+			alertify.confirm("Message", function () {
+				alertify.log("Aceptado");
+			}, function() {
+			    alertify.log("Cancelado");
+			});
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Prompt</p>
+	<button id="prompt">Click</button>
+
+	<script>
+
+		$('#prompt').click(function(ev){
+			title = "Este es el titulo del prompt"
+			prefix = "+506";
+
+			titleHtml = "<p class='msg'>"+title+"</p>";
+			prefixHtml = "<span class='prompt-prefix'>"+prefix+"</span>";
+      alertify
+          // .defaultValue("")
+          .prompt(titleHtml+prefixHtml, function (str, ev) {
+              ev.preventDefault();
+              alertify.success("You've clicked OK and typed: " + str);
+          }, function(ev) {
+              ev.preventDefault();
+              alertify.error("You've clicked Cancel");
+          });
+		  });
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Dialogos multiples - Ajax</p>
+	<button id="ajax">Click</button>
+	<script>
+		$('#ajax').click(function(){
+			alertify.confirm("Confirm?", function (ev) {
+
+	    // The click event is in the
+	    // event variable, so you can use
+	    // it here.
+	    ev.preventDefault();
+
+	    alertify.alert("Successful AJAX after OK");
+
+
+			}, function(ev) {
+
+			    // The click event is in the
+			    // event variable, so you can use
+			    // it here.
+			    ev.preventDefault();
+
+			    alertify.alert("Successful AJAX after Cancel");
+
+			});
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<h2>Logs</h2>
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Log estandar</p>
+	<button id="standarLog">Click</button>
+
+	<script>
+		$('#standarLog').click(function(){
+			alertify.log("Aceptado");
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Log estandar con html</p>
+	<button id="htmlLog">Click</button>
+
+	<script>
+		$('#htmlLog').click(function(){
+		var msg = "<img src='https://placehold.it/256x128'>" +
+		          "<h3>This is HTML</h3>" +
+		          "<p>It's great, right?</p>";
+		alertify.log(msg);
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Success Log</p>
+	<button id="successLog">Click</button>
+
+	<script>
+		$('#successLog').click(function(){
+			alertify.success("Success log message");
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Error Log</p>
+	<button id="errorLog">Click</button>
+
+	<script>
+		$('#errorLog').click(function(){
+			alertify.error("Error log message");
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Delay Log</p>
+	<button id="delayLog">Click</button>
+
+	<script>
+		$('#delayLog').click(function(){
+			alertify.delay(5000).log("Me oculto en 5 segundos");
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Log click</p>
+	<button id="logClick">Click</button>
+
+	<script>
+		$('#logClick').click(function(){
+			alertify
+  			.closeLogOnClick(true)
+  			.log("Clickeame para cerrarme");
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+	<p>Log persistente</p>
+	<button id="persistentLog">Click</button>
+
+	<script>
+		$('#persistentLog').click(function(){
+			alertify
+				.closeLogOnClick(false)
+				.delay(0).log("Me quedo abierto");
+		});
+	</script>
+<!-- ::::::::::::::::::::::::::::::::::::: -->
+
+
+<!-- Incluir el llamado al JS de la librería (Debe estar incluida libreria jquery)-->
+<script src="js/lib/alertify/alertify.js"></script>
+<!--  -->
+
+</body>
+</html>

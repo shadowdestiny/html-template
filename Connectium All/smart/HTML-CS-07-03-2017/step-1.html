@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Crowsourcing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/lib/jquery-2.2.0.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+	<script src="js/helpers.js"></script>
+</head>
+<body>
+	<div class="head">
+		<img src="img/logo.png" alt="Logo" class="logo">
+
+		<a href="#" class="sign-button">Sign out</a>
+	</div>
+	<div class="main-content clearfix">
+		<div class="initial-section">
+			<h1>¿Qué deseas publicar?</h1>
+
+			<ul class="initial-section-list">
+				<li class="current" onclick="redir('#button-1','step-2.jsp')">
+					<div class="item">
+						<img src="img/picture.png" alt="">
+						<span>Imagen</span>
+					</div>
+				</li>
+
+				<li onclick="redir('#button-1','video.html')">
+					<div class="item">
+						<img src="img/video.png" alt="">
+						<span>Video</span>
+					</div>
+				</li>
+
+				<li onclick="redir('#button-1','text.html')">
+					<div class="item">
+						<img src="img/text.png" alt="">
+						<span>Texto</span>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+		<div class="v-spacing-50 tac">
+			<a id="button-1" href="picture.html" class="button">Continuar</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>+ Móvil</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style-lealtad.css">
+	<link rel="stylesheet" href="js/lib/slider/slick/slick.css">
+	<link rel="stylesheet" href="js/lib/slider/slick/slick-theme.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--nuevos-->
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<!---->
+ 	<script src="js/lib/jquery-2.2.0.min.js" type="text/javascript"></script>
+ 	<script src="js/lib/jquery-ui-1.12.1.min.js"></script>
+ 	<script src="js/lib/slider/slick/slick.js"></script>
+ 	<script src="js/lib/formvalidator/jquery.form-validator.min.js"></script>
+	<script src="js/helpers.js"></script>
+</head>
+<body>
+
+<!-- Layout -->
+<div class="main-bar">
+	<div class="head-3 head">
+		<span class="navicon icon-menu"></span>
+		<img src="images/almaguia.png" alt="Logotipo +móvil" class="logo">
+		<span class="search-button icon-search"></span>
+	</div>
+
+	<div class="primary-menu">
+		<div class="user">
+			<div class="picture">
+				<img src="images/avatar.jpg">
+			</div>
+			<div class="name">Jhon Doe</div>
+		</div>
+
+		<ul class="navigation"></ul>
+
+		<div class="footer-menu">
+			<img src="images/almaguia.png" alt="Logotipo +movil" class="logo">
+			<p>Copyright 2016 - Reservados todos los derechos</p>
+			<a href="">Términos del servicio</a>
+		</div>
+	</div>
+
+	<div class="search-box">
+		<form action="" class="search-form">
+			<input type="text" class="input-search" placeholder="Buscar...">
+			<button class="search-btn icon-search"></button>
+		</form>
+		<span class="icon-arrow_back close-button"></span>
+	</div>
+
+	<div class="notification-bar-border-2">Saludo personalizado. <a href="#">Mi Perfil</a></div>
+</div>
+
+<!-- Fin layout -->
+
+<div class="main-section top-section-2">
+	<div class="wrap">
+		<div class="col-xs-12">
+			<div class="section-subtitle-trivia-4 icon-mas icon-left"><i class="material-icons">keyboard_backspace</i><p>Catálogo de Premios</p></div>
+			<div class="text-normal menu-i">
+				<a href="miscanjes.html"><button><i class="material-icons">card_giftcard</i></button></a><a href="miscanjes.html" class="no-icon">Mis Canjes</a>
+			</div>
+
+			<div class="text-center btn-m"><a href="catalogo_premios.html" class="btn btn-default col-xs-6">Premios</a></div>
+			<div class="text-center btn-m"><a href="#" class="btn btn-default col-xs-6 active-btn">Recargas</a></div>
+			
+		</div>
+
+		
+		<section class="regular slider col-xs-12">
+	   		<div class="col-xs-6">
+		      <img src="images/album-1.jpg">
+		      <div class="text-normal">
+		      	<p><b>Recarga de Segundos</b> <br>
+
+				3600 segundos
+		      
+		      	<br><br>Cantidad de Puntos XX</p>
+		      	<div class="btn-new btn-rosado text-center">
+					<a href="#" class="btn btn-rosa">Canjear <i class="material-icons">swap_horiz</i></a>
+				</div>
+		      </div>
+		    </div>
+		   <div class="col-xs-6">
+		      <img src="images/album-2.jpg">
+		      <div class="text-normal">
+		      	<p><b>Recarga de Datos</b> <br>
+
+				250 MB
+		      	
+		      	<br><br>Cantidad de Puntos XX</p>
+		      	<div class="btn-new btn-rosado text-center">
+					<a href="#" class="btn btn-rosa">Canjear <i class="material-icons">swap_horiz</i></a>
+				</div>
+		      </div>
+		    </div>
+		   
+		   <div class="col-xs-6">
+		      <img src="images/album-3.jpg">
+		      <div class="text-normal">
+		      	<p><b>Recarga de Segundos</b> <br>
+
+				3600 segundos
+		      
+		      	<br><br>Cantidad de Puntos XX</p>
+		      	<div class="btn-new btn-rosado text-center">
+					<a href="#" class="btn btn-rosa">Canjear <i class="material-icons">swap_horiz</i></a>
+				</div>
+		      </div>
+		    </div>
+		   <div class="col-xs-6">
+		      <img src="images/album-4.jpg">
+		      <div class="text-normal">
+		      	<p><b>Recarga de Datos</b> <br>
+
+				250 MB
+		      	
+		      	<br><br>Cantidad de Puntos XX</p>
+		      	<div class="btn-new btn-rosado text-center">
+					<a href="#" class="btn btn-rosa">Canjear <i class="material-icons">swap_horiz</i></a>
+				</div>
+		      </div>
+		    </div>
+  		</section>
+
+	</div>
+
+ 	
+</div>
+
+
+</body>
+</html>
+
+<script src="bootstrap/js/bootstrap.js"></script>
+
+ <script type="text/javascript">
+    $(document).on('ready', function() {
+      $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      });
+     
+    });
+  </script>

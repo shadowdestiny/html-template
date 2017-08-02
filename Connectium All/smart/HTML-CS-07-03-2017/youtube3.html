@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Crowsourcing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="js/lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="js/lib/bootstrap-slider-master/dist/css/bootstrap-slider.min.css">
+	<link rel="stylesheet" href="css/style-almaguia-unificado.css">
+	<link rel="stylesheet" href="css/icomoon/style.css">
+	<script src="js/lib/jquery-2.2.0.min.js"></script>
+	<script src="js/lib/prefixfree.min.js"></script>
+	<script src="js/helpers.js"></script>
+	<style type="text/css">
+		.slider.slider-horizontal {
+			width: 300px;
+			height: 20px;
+		}
+		.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+			/*margin-left: 0px;*/
+		}
+		.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+			/*margin-left: -10px;*/
+		}
+		.slider {
+			display: block;
+			position: relative;
+			background: #fff;
+			overflow-y: initial;
+			overflow-x: initial;
+		}
+	</style>
+	<script>
+
+        window.onload = function() {
+
+            // Video
+            var video = document.getElementById("video");
+
+            video.addEventListener("timeupdate",function(){
+				var duration = video.duration;
+				var out_time = (video.currentTime * 100) / duration;
+
+                $('#status-bar').slider('setValue', out_time );
+            },false);
+
+            var status_bar =  $('#status-bar');
+
+            status_bar.slider().on('slideStart', function(ev){
+                pause_video()
+            });
+            status_bar.slider().on('slideStop', function(ev){
+                //video.play();
+            });
+
+            // event controls
+			$("#play").click(function(){
+			    if (video.paused === true){
+                    play_video();
+			    } else {
+			        pause_video();
+				}
+			});
+
+			$("#full").click(function(){
+                video.pause();
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen();
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                }
+                video.pause();
+
+			});
+
+            $("#pause").click(function(){
+                video.pause();
+            });
+
+            $("#call").click(function(){
+                validateSound($(this));
+			});
+
+            $("#reload").click(function(){
+                video.load();
+                validateSound($("#call"), true);
+			});
+
+            var start = $("input[name='start']"),
+            duration = $("input[name='duration']"),
+            end = $("input[name='end']"),
+            diff = $("input[name='diff']")
+			;
+
+            duration.val(video.duration);
+
+            var min = 0,
+                max = 0;
+
+            var time = 0;
+            var slider = $("#ex2").slider({
+                min: 0,
+                max: 100,
+                step: 1,
+                formatter: function(newVal) {
+
+                    if (Object.prototype.toString.call( newVal ) === '[object Array]'){
+
+                        if (min != newVal[0]){
+                            time = video.duration * ( newVal[0] / 100);
+                            start.val(time);
+						} else if (max != newVal[1]){
+                            time = video.duration * ( newVal[1] / 100);
+                            end.val(time);
+						}
+
+                        diff.val(end.val() - start.val());
+                        if(newVal[1]-newVal[0]<30){
+                            $('#ex2').slider('setValue', [min,max]);
+
+                        } else {
+							min = newVal[0];
+							max = newVal[1];
+                        }
+
+                        video.currentTime = time;
+
+                        return "[ "+ (parseFloat(start.val()).toFixed(2))+":"+ (parseFloat(end.val()).toFixed(2)) +" ]";
+                    }
+                }
+            });
+
+            var status_bar = $("#status-bar").slider({
+                formatter: function(newVal) {
+                   if (video.paused === true)
+                   		video.currentTime = video.duration * ( (newVal ) / 100);
+
+                    return parseFloat(video.currentTime).toFixed(2);
+                }
+            });
+
+            video.load();
+
+            validateSound = function(self,force_off){
+
+                if(force_off === true)
+                    self.find("img").attr("src","images/iconosCS2/sonido_apagado.svg")
+                else
+					if (video.muted === true){
+						self.find("img").attr("src","images/iconosCS2/corneta.svg")
+						video.muted = false
+					} else {
+						self.find("img").attr("src","images/iconosCS2/sonido_apagado.svg")
+						video.muted = true
+					}
+            };
+
+			var pause_video = function(){
+			    $("#play img").attr("src","images/iconosCS2/play.svg");
+			    video.pause();
+			};
+
+            var play_video = function(){
+                $("#play img").attr("src","images/iconosCS2/pausa.svg");
+                video.play();
+            };
+
+        }
+	</script>
+</head>
+<body>
+	<div class="head">
+		<div class="head-logo">
+			<img src="img/logo.png" alt="Logo">
+		</div>
+		<a href="#" class="sign-button-left">Volver</a>
+		<a href="#" class="sign-button">Sign out</a>
+	</div>
+	<div class="main-section clearfix">
+		<div class="wrap width">
+			<!--<div class="v-spacing-10 tac"></div>-->
+
+			<div class="tab-set-1 ">
+				<div class="container">
+
+					<div class="rows padding no-border-t text-center">
+						<video autoplay muted class="video-cc" id="video" >
+							<source src="videos/landing.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<div id="video-controls">
+
+							<div class="text-center   video-controls">
+								<table class="width-relative">
+									<tr>
+										<td>
+											<a id="play" href="javascript:void(0)"><img src="images/iconosCS2/pausa.svg" class="controls"></a>
+										</td>
+										<td>
+											<a id="call" href="javascript:void(0)"><img src="images/iconosCS2/sonido_apagado.svg" class="controls"></a>
+										</td>
+										<td>
+											<a id="reload" href="javascript:void(0)"><img src="images/iconosCS2/reload.svg" class="controls"></a>
+										</td>
+										<td>
+											<a id="full" href="javascript:void(0)"><img src="images/iconosCS2/expand_screen.svg" class="controls"></a>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!--<br />
+							<div class="text-center">
+								<div class="slide-cs">
+									<input id="ex2" type="text" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="[0,100]"/>
+								</div>
+							</div>-->
+
+							<br />
+
+							<div class="text-center">
+								<div class="slide-cs">
+									<input id="status-bar" type="text" class="span2" value="" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="0"/>
+								</div>
+							</div>
+
+							<form id="send-video" action="" method="post">
+								<div class="text-center">
+									<input type="hidden" name="start" value="0">
+									<input type="hidden" name="end">
+									<input type="hidden" name="duration">
+									<input type="hidden" name="diff">
+								</div>
+
+							</form>
+
+						</div>
+					</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="v-spacing-50 tac">
+		<a id="button-1" href="javascript:void(0)" class="button" onclick="$('#send-video').submit()">Publicar</a>
+	</div>
+
+	<script src="js/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="js/lib/bootstrap-slider-master/dist/bootstrap-slider.min.js"></script>
+</body>
+</html>

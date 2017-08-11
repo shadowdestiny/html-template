@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<title></title>
+<g id="icomoon-ignore">
+</g>
+<path class="st0" d="M128,320v640c0,35.2,28.8,64,64,64h576c35.2,0,64-28.8,64-64V320H128z M320,896h-64V448h64V896z M448,896h-64
+	V448h64V896z M576,896h-64V448h64V896z M704,896h-64V448h64V896z M848,128H640V48c0-26.4-21.6-48-48-48H368c-26.4,0-48,21.6-48,48
+	v80H112c-26.4,0-48,21.6-48,48v80h832v-80C896,149.6,874.4,128,848,128z M576,128H384V64.8h192V128z"/>
+</svg>

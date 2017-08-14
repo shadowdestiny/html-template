@@ -331,11 +331,11 @@ a.link-session:hover{
     text-decoration: none;
 }
 a.link-session:visited{
-    color:#9d9d9d;
+    color:#000000;
     text-decoration: none;
 }
 a.link-session:link{
-    color:#9d9d9d;
+    color:#000000;
     text-decoration: none;
 }
 a.link-session:active{
@@ -348,24 +348,86 @@ a.link-session:active{
 .login{
     height: 40px;
     margin-top: 10px;
+    width: 218px;
+    margin-left: auto;
+    margin-right: 0px;
+    font-size: 12px;
 }
 /*social fluid*/
 .container-fluid.social-fluid{
     margin-top: 10px;
 }
 td.width{
-    width:10px;
+    width:3px;
 }
 .icon-with{
     width:16px
 }
-@media (min-width: 768px) {
+.icon-with2{
+    width:29px
+}
+
+@media (min-width: 768px){
     .navbar-right {
         float: right !important;
         margin-right: 18px;
+    }
+    .navbar-form {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-right: 0;
+        margin-left: 0;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-left.separate{
+        margin-left:48px;
     }
 }
 .navbar-default{
      background-color: #ffffff;
      border-color: #ffffff;
+}
+.row-form-search{
+    width:100%;
+    display:flex;
+}
+.input-form-search{
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 100% !important;
+    border: 1px solid #0163ac;
+}
+.input-form-button-search{
+    border-bottom-right-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    margin-left: -4px;
+    background-color: #0163ac;
+    border: 1px solid #0163ac;
+}
+
+div.cloud div{
+    position: absolute;
+    float: left;
+    margin-top: -34px;
+    margin-left: 20px;
+    border: 1px solid #e83333;
+    border-radius: 25px;
+    width: 21px;
+    height: 21px;
+    padding-right: 6px;
+    padding-bottom: 17px;
+    padding-top: 2px;
+    font-size: 12px;
+    background-color: #e83333;
+    color: #ffffff;
+}
+.navbar-form.auto-width{
+    padding: 0px 0px 0px 0px;
 }
